@@ -272,7 +272,7 @@ a.flash-item:hover {
     width       : 40px;
 }
 
-.avatarlink-item--img {
+.avatarlink-item img {
     border-radius: 50%;
     display      : inline-block;
     height       : 100%;

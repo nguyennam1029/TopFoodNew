@@ -72,7 +72,6 @@
                             </div>
                         </a>
                     </li>
-                    <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
 
 
                 <?php } ?>

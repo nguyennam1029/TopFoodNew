@@ -38,44 +38,16 @@
                 <li>
                     <a href="./contact/contact.html" class="nav-link">Liên Hệ</a>
                 </li>
-                <?php if (empty($_SESSION['id'])) { ?>
-                    <li class="nav-menu--active">
-                        <a href="sign_in.php" class="custom-btn btn-11 hover-active">
-                            <span>Đăng Nhập</span>
-                        </a>
-                    </li>
-                    <li class="nav-menu--active custom-btn-sigup">
-                        <a href="sign_up.php" class="custom-btn btn-11 hover-active btn-sigup">
-                            <span>Đăng Ký</span>
-                        </a>
-                    </li>
-                <?php   } else { ?>
-
-                    <li>
-                        <a class="avatarlink">
-                            <div class="avatarlink-list" style="
-                            display        : flex;
-                            justify-content: center;
-                            align-items    : center;">
-                                <div class="avatarlink-item" style="height      : 40px;
-                                                                    margin-right: 4px;
-                                                                    overflow    : hidden;
-                                                                    width       : 40px;">
-                                    <img class="avatarlink-item--img" src="images/user_img/user.jpg" alt="" style="
-                                    border-radius: 50%;
-    display      : inline-block;
-    height       : 100%;
-    object-fit   : cover;
-    width        : 100%;">
-                                </div>
-                                <span class="avatarlink-item--name"><?php echo $_SESSION['name'] ?></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
-
-
-                <?php } ?>
+                <li class="nav-menu--active">
+                    <a href="sign_in.php" class="custom-btn btn-11 hover-active">
+                        <span>Đăng Nhập</span>
+                    </a>
+                </li>
+                <li class="nav-menu--active custom-btn-sigup">
+                    <a href="sign_up.php" class="custom-btn btn-11 hover-active btn-sigup">
+                        <span>Đăng Ký</span>
+                    </a>
+                </li>
                 <li><a href="./blog.php" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
             </ul>

@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,11 +11,7 @@ session_start();
 
 <body>
   <div class="modal">
-    <?php if (isset($_SESSION['error'])) {
-      echo $_SESSION['error'];
-      unset($_SESSION['error']);
-    } ?>
-    <div class="modal-overlay active" style="
+    <div class="modal-overlay" style="
     background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
     
     "></div>
@@ -30,55 +22,37 @@ session_start();
         </svg>
       </a>
       <div class="modal-main">
-        <?php
-        if (isset($_GET['error'])) {
-          echo $_GET['error'];
-        }
-        ?>
-        <form method="post" action="process_signup.php" class="form-field" autocomplete="off">
+        <form method="post" action="insert_signup" class="form-field" autocomplete="off">
           <img src="./images/Vector.png" alt="" class="form-field--background" />
-          <h1 class="form-heading">Đăng Ký</h1>
-          <div style="padding: 0 30px">
+          <h1 class="form-heading">Đăng Nhập</h1>
+          <div style="padding: 15px 30px">
             <div class="form-login--name">
-              <input type="text" class="form-input" placeholder=" " name="name" />
-              <label for="" class="form-label">Full Name</label>
-            </div>
-
-            <div class="form-login--name">
-              <input type="email" class="form-input" placeholder=" " name="email" />
+              <input type="email" class="form-input" placeholder=" " autocomplete='off' />
               <label for="" class="form-label">Email</label>
             </div>
-            <div class="form-signup">
-              <div class="form-login--name form-signup--mr">
-                <input type="password" class="form-input" placeholder=" " name="password" />
-                <label for="" class="form-label">Password</label>
-              </div>
-              <div class="form-login--name">
-                <input type="text" class="form-input" placeholder=" " name="phone" />
-                <label for="" class="form-label">Phone</label>
-              </div>
-
+            <div class="form-login--pass">
+              <input type="password" class="form-input" autocomplete='off' placeholder=" " />
+              <label for="" class="form-label">Password</label>
             </div>
 
-            <div class="form-rules">
-              <input type="checkbox" class="form-checkmark--input" />
-              <p class="form-checkmark--text form-rules--text">
-                Tôi đông ý với điều khoản của TopFood
-              </p>
+            <div class="form-forgot">
+              <a href="#" class="form-login--link">Quên mật khẩu ?</a>
             </div>
 
             <div class="form-btn">
-              <button type="submit" class="formt-btn--shared formt-btn--login">Gửi </button>
+              <button class="formt-btn--shared formt-btn--login">
+                Đăng Nhập
+              </button>
             </div>
 
             <div class="create-account">
-              <span class="create-account--text">
-                Nếu bạn đã có tài khoản !
-                <a href="sign_in.php" target="_selfe" class="create-account--link">Login</a>
+              <span class="create-account--text">Chưa có tài khoản ?
+                <a href="sign_up.php" target="_self" class="create-account--link">Tạo tài khoản</a>
               </span>
             </div>
             <div class="sign-with">
-              <p class="sign-with--text">Đăng kí bằng</p>
+              <p class="sign-with--line">---Hoặc---</p>
+              <p class="sign-with--text">Đăng ký qua</p>
               <div class="sign-with--list">
                 <a href="#" class="sign-with--link">
                   <img class="sign-with--icon" src="./images/Googel.png" alt="" />

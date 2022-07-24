@@ -52,7 +52,7 @@
                 <?php   } else { ?>
 
                     <li>
-                        <a class="avatarlink">
+                        <a class="nav-link avatarlink">
                             <div class="avatarlink-list" style="
                             display        : flex;
                             justify-content: center;
@@ -72,7 +72,6 @@
                             </div>
                         </a>
                     </li>
-                    <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
 
 
                 <?php } ?>

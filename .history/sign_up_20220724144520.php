@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +11,7 @@ session_start();
 
 <body>
   <div class="modal">
-    <?php if (isset($_SESSION['error'])) {
-      echo $_SESSION['error'];
-      unset($_SESSION['error']);
-    } ?>
-    <div class="modal-overlay active" style="
-    background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
-    
-    "></div>
+    <div class="modal-overlay"></div>
     <div class="modal-content">
       <a href="index.php" class="modal-close">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -30,12 +19,7 @@ session_start();
         </svg>
       </a>
       <div class="modal-main">
-        <?php
-        if (isset($_GET['error'])) {
-          echo $_GET['error'];
-        }
-        ?>
-        <form method="post" action="process_signup.php" class="form-field" autocomplete="off">
+        <form method="post" action="insert_signup.php" class="form-field">
           <img src="./images/Vector.png" alt="" class="form-field--background" />
           <h1 class="form-heading">Đăng Ký</h1>
           <div style="padding: 0 30px">
@@ -54,7 +38,7 @@ session_start();
                 <label for="" class="form-label">Password</label>
               </div>
               <div class="form-login--name">
-                <input type="text" class="form-input" placeholder=" " name="phone" />
+                <input type="text" class="form-input" placeholder=" " />
                 <label for="" class="form-label">Phone</label>
               </div>
 
@@ -63,22 +47,22 @@ session_start();
             <div class="form-rules">
               <input type="checkbox" class="form-checkmark--input" />
               <p class="form-checkmark--text form-rules--text">
-                Tôi đông ý với điều khoản của TopFood
+                Tôi đông ý với điều khoản của Movie - Platform
               </p>
             </div>
 
             <div class="form-btn">
-              <button type="submit" class="formt-btn--shared formt-btn--login">Gửi </button>
+              <input type="submit" class="formt-btn--shared formt-btn--login" />
             </div>
 
             <div class="create-account">
               <span class="create-account--text">
-                Nếu bạn đã có tài khoản !
-                <a href="sign_in.php" target="_selfe" class="create-account--link">Login</a>
+                Don’t have account ?
+                <a href="form_login.html" target="_selfe" class="create-account--link">Login</a>
               </span>
             </div>
             <div class="sign-with">
-              <p class="sign-with--text">Đăng kí bằng</p>
+              <p class="sign-with--text">Sign in with</p>
               <div class="sign-with--list">
                 <a href="#" class="sign-with--link">
                   <img class="sign-with--icon" src="./images/Googel.png" alt="" />

@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +11,6 @@ session_start();
 
 <body>
   <div class="modal">
-    <?php if (isset($_SESSION['error'])) {
-      echo $_SESSION['error'];
-      unset($_SESSION['error']);
-    } ?>
     <div class="modal-overlay active" style="
     background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
     

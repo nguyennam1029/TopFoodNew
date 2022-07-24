@@ -13,7 +13,6 @@ require '../check_admin_login.php';
 <body>
     <?php require '../menu.php';
     require '../connect.php';
-
     $sql = "select products.*,
     manufacturers.name as manufacturer_name from products
     join manufacturers on products.manufacturer_id = manufacturers.id ";

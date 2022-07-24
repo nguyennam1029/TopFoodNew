@@ -4,7 +4,7 @@
     --box-bg    : #221f1f;
     --text-color: #ffffff;
 
-    --bg-nav-dark   : hsl(220deg 51% 49%);
+    --bg-nav-dark   : hsl(255, 31%, 26%);
     --bg-dark       : hsl(216, 47%, 41%);
     --bg-dark-footer: hsl(254, 29%, 21%);
 
@@ -257,29 +257,6 @@ a.flash-item:hover {
     font-size  : 13px;
 }
 
-.avatarlink {}
-
-.avatarlink-list {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-.avatarlink-item {
-    height      : 40px;
-    margin-right: 4px;
-    overflow    : hidden;
-    width       : 40px;
-}
-
-.avatarlink-item--img {
-    border-radius: 50%;
-    display      : inline-block;
-    height       : 100%;
-    object-fit   : cover;
-    width        : 100%;
-}
-
 .type-list {
     height            : 0;
     position          : absolute;
@@ -385,8 +362,7 @@ a.flash-item:hover {
 }
 
 .btn-drak {
-    background: linear-gradient(to right, #0087af,
-            #6cd9fe);
+    background: linear-gradient(to right, #4500ac, #ff00f4);
 }
 
 .btn-11:hover {
@@ -2007,15 +1983,13 @@ footer a.logo:hover {
     width           : 100%;
     height          : 100%;
     inset           : 0;
-    background      : url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
+    background      : url('./images/banner/banner3.jpg') top center / cover no-repeat;
     background-color: rgba(0, 0, 0, 0.2);
     z-index         : -1;
     filter          : brightness(0.4);
     -webkit-filter  : brightness(0.4);
     cursor          : pointer;
 }
-
-.modal-overlay.active {}
 
 .modal-content {
     /* background-color: white; */

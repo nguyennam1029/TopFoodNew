@@ -4,8 +4,8 @@
     --box-bg    : #221f1f;
     --text-color: #ffffff;
 
-    --bg-nav-dark   : hsl(220deg 51% 49%);
-    --bg-dark       : hsl(216, 47%, 41%);
+    --bg-nav-dark   : hsl(255, 31%, 26%);
+    --bg-dark       : hsl(216deg 63% 35%);
     --bg-dark-footer: hsl(254, 29%, 21%);
 
 
@@ -255,29 +255,6 @@ a.flash-item:hover {
 .nav-link-icon {
     line-height: 20px;
     font-size  : 13px;
-}
-
-.avatarlink {}
-
-.avatarlink-list {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-.avatarlink-item {
-    height      : 40px;
-    margin-right: 4px;
-    overflow    : hidden;
-    width       : 40px;
-}
-
-.avatarlink-item--img {
-    border-radius: 50%;
-    display      : inline-block;
-    height       : 100%;
-    object-fit   : cover;
-    width        : 100%;
 }
 
 .type-list {

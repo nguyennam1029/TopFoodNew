@@ -52,27 +52,20 @@
                 <?php   } else { ?>
 
                     <li>
-                        <a class="avatarlink">
-                            <div class="avatarlink-list" style="
-                            display        : flex;
-                            justify-content: center;
-                            align-items    : center;">
+                        <a class="nav-link avatarlink">
+                            <div class="avatarlink-list" style="display        : flex;
+    justify-content: center;
+    align-items    : center;">
                                 <div class="avatarlink-item" style="height      : 40px;
-                                                                    margin-right: 4px;
-                                                                    overflow    : hidden;
-                                                                    width       : 40px;">
-                                    <img class="avatarlink-item--img" src="images/user_img/user.jpg" alt="" style="
-                                    border-radius: 50%;
-    display      : inline-block;
-    height       : 100%;
-    object-fit   : cover;
-    width        : 100%;">
+    margin-right: 4px;
+    overflow    : hidden;
+    width       : 40px;">
+                                    <img class="avatarlink-item--img" src="images/user_img/user.jpg" alt="">
                                 </div>
                                 <span class="avatarlink-item--name"><?php echo $_SESSION['name'] ?></span>
                             </div>
                         </a>
                     </li>
-                    <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
 
 
                 <?php } ?>

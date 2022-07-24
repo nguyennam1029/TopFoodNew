@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +11,6 @@ session_start();
 
 <body>
   <div class="modal">
-    <?php if (isset($_SESSION['error'])) {
-      echo $_SESSION['error'];
-      unset($_SESSION['error']);
-    } ?>
     <div class="modal-overlay active" style="
     background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
     
@@ -30,12 +22,7 @@ session_start();
         </svg>
       </a>
       <div class="modal-main">
-        <?php
-        if (isset($_GET['error'])) {
-          echo $_GET['error'];
-        }
-        ?>
-        <form method="post" action="process_signup.php" class="form-field" autocomplete="off">
+        <form method="post" action="insert_signup.php" class="form-field" autocomplete="off">
           <img src="./images/Vector.png" alt="" class="form-field--background" />
           <h1 class="form-heading">Đăng Ký</h1>
           <div style="padding: 0 30px">

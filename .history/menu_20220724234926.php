@@ -50,30 +50,13 @@
                         </a>
                     </li>
                 <?php   } else { ?>
-
+                    chào <?php echo $_SESSION['name'] ?>,
                     <li>
-                        <a class="avatarlink">
-                            <div class="avatarlink-list" style="
-                            display        : flex;
-                            justify-content: center;
-                            align-items    : center;">
-                                <div class="avatarlink-item" style="height      : 40px;
-                                                                    margin-right: 4px;
-                                                                    overflow    : hidden;
-                                                                    width       : 40px;">
-                                    <img class="avatarlink-item--img" src="images/user_img/user.jpg" alt="" style="
-                                    border-radius: 50%;
-    display      : inline-block;
-    height       : 100%;
-    object-fit   : cover;
-    width        : 100%;">
-                                </div>
-                                <span class="avatarlink-item--name"><?php echo $_SESSION['name'] ?></span>
-                            </div>
-                        </a>
+                        <a href="signout.php">đăng xuất</a>
                     </li>
-                    <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
-
+                    <li>
+                        <a href="view_cart.php">giỏ hàng</a>
+                    </li>
 
                 <?php } ?>
                 <li><a href="./blog.php" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>

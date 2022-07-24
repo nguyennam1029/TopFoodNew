@@ -11,7 +11,7 @@ if (mysqli_num_rows($result) == 1) {
 
     $_SESSION['id'] = $each['id'];
     $_SESSION['name'] = $each['name'];
-    header('location:/san_pham/index.php');
+    header('location:root/san_pham/index.php');
     exit;
 }
 header('location:index.php');
