@@ -1030,24 +1030,23 @@ footer a.logo:hover {
 
 
 .noti {
-    position          : fixed;
-    right             : 12px;
-    top               : 66px;
-    background-color  : rgb(244, 244, 244);
-    /*box-shadow      : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    */
-    border-radius     : 8px;
-    display           : flex;
-    transform         : translateX(150%);
-    animation         : noti 6s forwards 1 linear;
-    z-index           : 9999;
-    -webkit-transform : translateX(150%);
-    -moz-transform    : translateX(150%);
-    -ms-transform     : translateX(150%);
-    -o-transform      : translateX(150%);
-    -webkit-animation : noti 6s forwards 1 linear;
-    box-shadow        : -15px 17px 16px -12px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: -15px 17px 16px -12px rgba(0, 0, 0, 0.5);
+    position        : fixed;
+    right           : 15px;
+    top             : 15px;
+    background-color: rgb(244, 244, 244);
+    box-shadow      : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius   : 8px;
+    display         : flex;
+
+
+    transform        : translateX(150%);
+    animation        : noti 6s forwards 1 linear;
+    z-index          : 9999;
+    -webkit-transform: translateX(150%);
+    -moz-transform   : translateX(150%);
+    -ms-transform    : translateX(150%);
+    -o-transform     : translateX(150%);
+    -webkit-animation: noti 6s forwards 1 linear;
 }
 
 @keyframes noti {
@@ -1082,17 +1081,17 @@ footer a.logo:hover {
 .noti-content i {
     color                       : #000000;
     margin-right                : 8px;
+    -webkit-animation           : tada 1.5s ease infinite;
+    animation                   : tada 1.5s ease infinite;
     background                  : linear-gradient(to right, #ff8a00, #ff2070);
     -webkit-background-clip     : text;
     -webkit-text-fill-color     : transparent;
     -webkit-box-decoration-break: clone;
-    animation                   : tada 1.2s ease infinite;
-    -webkit-animation           : tada 1.2s ease infinite;
 }
 
 .noti-title {
     font-size  : 16px;
-    font-weight: 400;
+    font-weight: 600;
     color      : #000000;
 }
 

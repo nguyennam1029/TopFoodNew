@@ -36,19 +36,12 @@ session_start();
     <?php include 'menu.php'
     ?>
 
+    <h4 class="noti-login--name">
+      <?php if (isset($_GET['notiCart'])) { ?>
+        vui lòng
+      <?php } ?>
 
-    <?php if (isset($_GET['notiCart'])) { ?>
-      <div class="noti">
-        <div class="noti-content">
-          <i class='bx bxs-bell-ring'></i>
-          <span class="noti-title">Bạn vui lòng: Đăng ký hoặc Đăng nhập</span>
-          <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
-
-        </div>
-      </div>
-    <?php } ?>
-
-
+    </h4>
     <!-- HERO SECTION -->
     <div class="hero-section">
       <!-- HERO SLIDE -->

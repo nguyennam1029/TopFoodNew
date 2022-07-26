@@ -39,10 +39,9 @@ session_start();
 
     <?php if (isset($_GET['notiCart'])) { ?>
       <div class="noti">
+        <img src="https://source.unsplash.com/random" alt="" class="noti-image" />
         <div class="noti-content">
-          <i class='bx bxs-bell-ring'></i>
-          <span class="noti-title">Bạn vui lòng: Đăng ký hoặc Đăng nhập</span>
-          <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
+          <span class="noti-title">Bạn vui lòng đăng ký hoặc đăng nhập</span>
 
         </div>
       </div>

@@ -35,20 +35,14 @@ session_start();
   <div class="app">
     <?php include 'menu.php'
     ?>
-
-
-    <?php if (isset($_GET['notiCart'])) { ?>
-      <div class="noti">
-        <div class="noti-content">
-          <i class='bx bxs-bell-ring'></i>
-          <span class="noti-title">Bạn vui lòng: Đăng ký hoặc Đăng nhập</span>
-          <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
-
-        </div>
-      </div>
-    <?php } ?>
-
-
+    <?php
+    // $notiCart = $_GET['notiCart'];
+    ?>
+    <h4 class="noti-login--name">
+      <?php if (empty($_SESSION['notiCart'])) { ?>
+        vui lòng
+      <?php } ?>
+    </h4>
     <!-- HERO SECTION -->
     <div class="hero-section">
       <!-- HERO SLIDE -->

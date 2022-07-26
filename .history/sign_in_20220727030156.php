@@ -35,9 +35,9 @@
     <?php if (isset($_GET['error'])) { ?>
       <div class="noti">
         <div class="noti-content">
-          <i class='bx bx-error-alt'></i>
+          <i class='bx bxs-bell-ring'></i>
           <span class="noti-title">Bạn vui lòng: xem lại email hoặc mật khẩu</span>
-          <i class='bx bx-error-alt' style="margin-left: 6px; margin-right: 0;"></i>
+          <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
 
         </div>
       </div>

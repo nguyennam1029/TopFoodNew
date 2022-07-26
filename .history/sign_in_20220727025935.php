@@ -17,6 +17,10 @@
   <div class="modal">
 
     <?php if (isset($_SESSION['noti'])) { ?>
+      <!-- echo $_SESSION['name'];
+      echo $_SESSION['noti'];
+      unset($_SESSION['name']);
+      unset($_SESSION['noti']); -->
       <div class="noti">
         <div class="noti-content">
           <i class='bx bxs-bell-ring'></i>
@@ -32,16 +36,6 @@
       </div>
     <?php } ?>
 
-    <?php if (isset($_GET['error'])) { ?>
-      <div class="noti">
-        <div class="noti-content">
-          <i class='bx bx-error-alt'></i>
-          <span class="noti-title">Bạn vui lòng: xem lại email hoặc mật khẩu</span>
-          <i class='bx bx-error-alt' style="margin-left: 6px; margin-right: 0;"></i>
-
-        </div>
-      </div>
-    <?php } ?>
     <div class="modal-overlay" style="
     background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
     

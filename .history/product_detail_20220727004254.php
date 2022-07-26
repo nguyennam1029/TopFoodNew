@@ -233,7 +233,7 @@ session_start();
                                                     <a href="add_to_cart.php?id=<?php echo $item_product['id'] ?>" class="add-cart--title">Thêm vào giỏ hàng </a>
                                                 <?php } ?>
                                                 <?php if (empty($_SESSION['id'])) { ?>
-                                                    <a href="index.php?notiCart=Vui lòng đăng kí hoặc đăng nhập" class="add-cart--title">Thêm vào giỏ hàng </a>
+                                                    <a href="sign_in.php" class="add-cart--title">Thêm vào giỏ hàng </a>
                                                 <?php } ?>
                                             </p>
                                         </li>

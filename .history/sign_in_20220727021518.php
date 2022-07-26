@@ -7,41 +7,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đăng kí</title>
-  <!-- BOX ICONS -->
-  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
+  <?php if (isset($_SESSION['noti'])) { ?>
+    <div class="noti">
+      <div class="noti-content">
+        <i class='bx bxs-bell-ring'></i>
+        <span class="noti-title">
+          Bạn
+          <?php echo $_SESSION['name'];
+          echo $_SESSION['noti'];
+          unset($_SESSION['name']);
+          unset($_SESSION['noti']);
+          ?>
+        </span>
+        <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
+
+      </div>
+    </div>
+  <?php } ?>
 
   <div class="modal">
-
-    <?php if (isset($_SESSION['noti'])) { ?>
-      <div class="noti">
-        <div class="noti-content">
-          <i class='bx bxs-bell-ring'></i>
-          <span class="noti-title">Chúc mừng <?php echo $_SESSION['name'];
-                                              unset($_SESSION['name']);
-
-                                              echo $_SESSION['noti'];
-                                              unset($_SESSION['noti']);
-                                              ?> bạn đã đăng kí thành công</span>
-          <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
-
-        </div>
-      </div>
-    <?php } ?>
-
-    <?php if (isset($_GET['error'])) { ?>
-      <div class="noti">
-        <div class="noti-content">
-          <i class='bx bx-error-alt'></i>
-          <span class="noti-title">Bạn vui lòng: xem lại email hoặc mật khẩu</span>
-          <i class='bx bx-error-alt' style="margin-left: 6px; margin-right: 0;"></i>
-
-        </div>
-      </div>
-    <?php } ?>
+    <div class="noti-login" style="
+    position: fixed;
+    top: 11px;
+    right: 23px;
+    padding: 4px 10px;
+    background: #000;
+    border-radius: 6px;
+">
+      <h4 class="noti-login--name">
+        <?php if (isset($_SESSION['noti'])) {
+          echo $_SESSION['name'];
+          echo $_SESSION['noti'];
+          unset($_SESSION['name']);
+          unset($_SESSION['noti']);
+        } ?>
+      </h4>
+    </div>
     <div class="modal-overlay" style="
     background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
     
