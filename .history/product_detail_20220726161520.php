@@ -86,8 +86,8 @@ session_start();
         }
 
         .text.text-2 {
-            display: block;
-            margin-bottom: 6px;
+            line-height: 24px;
+
         }
 
         .toast .close {

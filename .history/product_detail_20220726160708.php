@@ -85,11 +85,6 @@ session_start();
             line-height: 26px;
         }
 
-        .text.text-2 {
-            display: block;
-            margin-bottom: 6px;
-        }
-
         .toast .close {
             position: absolute;
             top: 5px;

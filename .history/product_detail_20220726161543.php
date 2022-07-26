@@ -87,7 +87,7 @@ session_start();
 
         .text.text-2 {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .toast .close {

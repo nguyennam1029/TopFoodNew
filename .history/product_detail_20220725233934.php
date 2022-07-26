@@ -29,113 +29,6 @@ session_start();
 </head>
 
 <body>
-    <style>
-        .toast {
-            position: fixed;
-            top: 60px;
-            right: 30px;
-            border-radius: 6px;
-            background: #f9f9f9;
-            /* padding: 2px 35px 20px 25px; */
-            padding: 7px 10px;
-            box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
-            border-left: 4px solid #43d94c;
-            overflow: hidden;
-            transform: translateX(calc(100% + 30px));
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
-        }
-
-        .toast.active {
-            transform: translateX(0%);
-        }
-
-        .toast .toast-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .toast-content .check {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 20px;
-            width: 20px;
-            background-color: #47d864;
-            color: #fff;
-            font-size: 16px;
-            border-radius: 50%;
-        }
-
-        .toast-content .message {
-            display: flex;
-            flex-direction: column;
-            margin: 0 20px;
-        }
-
-        .message .text {
-            font-size: 14px;
-            font-weight: 400;
-            color: #666666;
-        }
-
-        .message .text.text-1 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-            line-height: 26px;
-        }
-
-        .text.text-2 {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .toast .close {
-            position: absolute;
-            top: 5px;
-            right: 11px;
-            padding: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            opacity: 0.7;
-            color: #333;
-        }
-
-        .toast .close:hover {
-            opacity: 1;
-        }
-
-        .toast .progress {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            width: 100%;
-            background: #ddd;
-        }
-
-        .toast .progress:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #47d864;
-        }
-
-        .progress.active:before {
-            animation: progress 5s linear forwards;
-        }
-
-        @keyframes progress {
-            100% {
-                right: 100%;
-            }
-        }
-
-        /* END-TOAST  */
-    </style>
     <div class="app">
         <style>
             .nav-link.active {
@@ -160,9 +53,8 @@ session_start();
         $sql = " select * from products where id = $id";
         $result = mysqli_query($connect, $sql);
         $item_product = mysqli_fetch_array($result);
-
         ?>
-
+        <!-- END-PHP-DETAIL  -->
 
         <div class="container" id="playMovie">
 
@@ -193,7 +85,6 @@ session_start();
                                         <p class="rating-titel">
                                             ( 4.5 điểm / 9.2 Triệu lượt )
                                         </p>
-
                                     </div>
                                     <!-- <p class="moive-info--time">
                                         <i class="moive-info--icon fa-solid fa-clock-rotate-left"></i>
@@ -227,8 +118,8 @@ session_start();
                                             <p class="cart-item buy-now">Mua ngay</p>
 
                                             <p class="cart-item add-cart">
-                                                <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-
+                                                <i class="fa-solid fa-cart-plus"></i>
+                                                <!-- <a href="add_to_cart.php?id=<?php echo $item_product['id'] ?>" class="add-cart--title">Thêm vào giỏ hàng</a> -->
                                                 <?php if (!empty($_SESSION['id'])) { ?>
                                                     <a href="add_to_cart.php?id=<?php echo $item_product['id'] ?>" class="add-cart--title">Thêm vào giỏ hàng </a>
                                                 <?php } ?>
@@ -413,30 +304,12 @@ session_start();
             
         </div> -->
         </div>
-        <!-- END-PHP-DETAIL  -->
+
 
         <!-- FOOTER SECTION -->
         <?php include 'footer.php'
         ?>
         <!-- END FOOTER SECTION -->
-
-        <!-- TOAST -->
-        <div class="toast">
-            <div class="toast-content">
-                <i class="fas fa-solid fa-check check"></i>
-
-                <div class="message">
-                    <span class="text text-1">Thành công</span>
-                    <span class="text text-2">Sản phẩm đã được thêm vào giỏ hàng</span>
-                </div>
-            </div>
-            <i class="fa-solid fa-xmark close"></i>
-
-            <div class="progress"></div>
-        </div>
-        <!-- END-TOAST  -->
-
-
         <!-- BACK TO TOP -->
         <a href="#" class="backtotop">
             <i class='bx bx-chevron-up'></i>
@@ -449,40 +322,7 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
     <script src="./detail/detail.js"></script>
 
-    <script>
-        // -- START-TOAST
-        const buttonToast = document.querySelector(".add-cart--icon"),
-            toast = document.querySelector(".toast");
-        (closeIcon = document.querySelector(".close")),
-        (progress = document.querySelector(".progress"));
 
-        let timer1, timer2;
-        console.log("toast", buttonToast);
-        buttonToast.addEventListener("click", () => {
-            toast.classList.add("active");
-            progress.classList.add("active");
-
-            timer1 = setTimeout(() => {
-                toast.classList.remove("active");
-            }, 5000); //1s = 1000 milliseconds
-
-            timer2 = setTimeout(() => {
-                progress.classList.remove("active");
-            }, 5300);
-        });
-
-        closeIcon.addEventListener("click", () => {
-            toast.classList.remove("active");
-
-            setTimeout(() => {
-                progress.classList.remove("active");
-            }, 300);
-
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-        });
-        // --END-TOAST
-    </script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 23, 2022 lúc 08:48 PM
+-- Thời gian đã tạo: Th7 26, 2022 lúc 06:31 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -62,7 +62,8 @@ CREATE TABLE `manufacturers` (
 
 INSERT INTO `manufacturers` (`id`, `name`, `address`, `phone`, `photo`) VALUES
 (1, 'Hải sản', 'KTX bạc khoa', '0966456789', 'đư'),
-(2, 'Cơm', 'Số 2 tạ quang bửu', '06666555', '');
+(2, 'Cơm', 'Số 2 tạ quang bửu', '06666555', ''),
+(3, 'Thịt', 'công ty TNHH một thành viên', '(+84) 966216495', 'v');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,9 @@ INSERT INTO `products` (`id`, `name`, `photo`, `price`, `description`, `manufact
 (5, 'Thịt bò cao cấp', '1658591510.jpg', '289000', 'THịt siêu ngon', 1),
 (6, 'Sashimi phong cách nhật', '1658592090.jpg', '389000', 'ngon', 1),
 (7, 'Cơm bò rang', '1658592155.webp', '198000', 'ngonnn', 1),
-(8, 'Trứng cá hồi', '1658592321.jpg', '459000', '', 1);
+(8, 'Trứng cá hồi', '1658592321.jpg', '459000', '', 1),
+(9, 'Cá tươi ngon', '1658645960.jpg', '1299000', '', 1),
+(10, 'Shasimi siêu dễ ăn', '1658645783.jpg', '340000', '34234', 1);
 
 -- --------------------------------------------------------
 
@@ -101,12 +104,31 @@ INSERT INTO `products` (`id`, `name`, `photo`, `price`, `description`, `manufact
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `user` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(200) NOT NULL,
   `phone` char(20) NOT NULL,
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `phone`, `address`) VALUES
+(1, 'srere', '1rf@gmail.com', '13435', '132344', ''),
+(2, 'trương ngọc minh', 'minh@gmail.com', '123', '12456774', ''),
+(3, 'nguyennam', 'namnam1029@gmail.com', '123', '1243546', ''),
+(4, 'blabla', '12f@g', '1323', '133444', ''),
+(5, 'Minh', 'naasf12@g', '123', '12345', ''),
+(6, 'Nam good boy', '12gg@G', '123', '13246', ''),
+(7, 'gê', 'namnam102339@gmail.com', '22', '5335', ''),
+(8, 'nam1', 'nam1@gmail.com', '1', '123456', ''),
+(9, 'namthu', 'namkfk@gmail.com', '1', '1', ''),
+(10, 'namVip', 'nam000@gmail.com', '123', '123', ''),
+(11, 'NamDev', 'namdev@gmail.com', '1', '111', ''),
+(12, 'Nguyen', 'nguyen@g', '1', '123', ''),
+(13, '1', '111@g', '1', '1', '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -151,19 +173,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `manufacturers`
 --
 ALTER TABLE `manufacturers`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

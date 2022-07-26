@@ -38,7 +38,9 @@
                 <li>
                     <a href="./contact/contact.html" class="nav-link">Liên Hệ</a>
                 </li>
-
+                <li>
+                    <a href="view_cart2.php" class="nav-link">View</a>
+                </li>
                 <?php if (empty($_SESSION['id'])) { ?>
                     <li class="nav-menu--active">
                         <a href="sign_in.php" class="custom-btn btn-11 hover-active">
@@ -77,7 +79,7 @@
 
 
                 <?php } ?>
-                <li><a href="view_cart2.php" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="view_cart.php" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
             </ul>
             <!-- MOBILE MENU TOGGLE -->

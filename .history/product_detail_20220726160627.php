@@ -85,11 +85,6 @@ session_start();
             line-height: 26px;
         }
 
-        .text.text-2 {
-            display: block;
-            margin-bottom: 6px;
-        }
-
         .toast .close {
             position: absolute;
             top: 5px;
@@ -426,8 +421,8 @@ session_start();
                 <i class="fas fa-solid fa-check check"></i>
 
                 <div class="message">
-                    <span class="text text-1">Thành công</span>
-                    <span class="text text-2">Sản phẩm đã được thêm vào giỏ hàng</span>
+                    <span class="text text-1">Success</span>
+                    <span class="text text-2">Your changes has been saved</span>
                 </div>
             </div>
             <i class="fa-solid fa-xmark close"></i>

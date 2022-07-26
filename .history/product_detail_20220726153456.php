@@ -32,14 +32,13 @@ session_start();
     <style>
         .toast {
             position: fixed;
-            top: 60px;
+            top: 25px;
             right: 30px;
-            border-radius: 6px;
-            background: #f9f9f9;
-            /* padding: 2px 35px 20px 25px; */
-            padding: 7px 10px;
-            box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
-            border-left: 4px solid #43d94c;
+            border-radius: 12px;
+            background: #fff;
+            padding: 20px 35px 20px 25px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            border-left: 6px solid #4070f4 !important;
             overflow: hidden;
             transform: translateX(calc(100% + 30px));
             transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
@@ -58,11 +57,11 @@ session_start();
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 20px;
-            width: 20px;
-            background-color: #47d864;
+            height: 35px;
+            width: 35px;
+            background-color: #4070f4;
             color: #fff;
-            font-size: 16px;
+            font-size: 20px;
             border-radius: 50%;
         }
 
@@ -73,32 +72,24 @@ session_start();
         }
 
         .message .text {
-            font-size: 14px;
+            font-size: 20px;
             font-weight: 400;
+            ;
             color: #666666;
         }
 
         .message .text.text-1 {
-            font-size: 16px;
             font-weight: 600;
             color: #333;
-            line-height: 26px;
-        }
-
-        .text.text-2 {
-            display: block;
-            margin-bottom: 6px;
         }
 
         .toast .close {
             position: absolute;
-            top: 5px;
-            right: 11px;
+            top: 10px;
+            right: 15px;
             padding: 5px;
             cursor: pointer;
-            font-size: 18px;
             opacity: 0.7;
-            color: #333;
         }
 
         .toast .close:hover {
@@ -121,7 +112,7 @@ session_start();
             right: 0;
             height: 100%;
             width: 100%;
-            background-color: #47d864;
+            background-color: #4070f4;
         }
 
         .progress.active:before {
@@ -227,7 +218,7 @@ session_start();
                                             <p class="cart-item buy-now">Mua ngay</p>
 
                                             <p class="cart-item add-cart">
-                                                <i class="fa-solid fa-cart-plus add-cart--icon"></i>
+                                                <i class="fa-solid fa-cart-plus"></i>
 
                                                 <?php if (!empty($_SESSION['id'])) { ?>
                                                     <a href="add_to_cart.php?id=<?php echo $item_product['id'] ?>" class="add-cart--title">Thêm vào giỏ hàng </a>
@@ -426,8 +417,8 @@ session_start();
                 <i class="fas fa-solid fa-check check"></i>
 
                 <div class="message">
-                    <span class="text text-1">Thành công</span>
-                    <span class="text text-2">Sản phẩm đã được thêm vào giỏ hàng</span>
+                    <span class="text text-1">Success</span>
+                    <span class="text text-2">Your changes has been saved</span>
                 </div>
             </div>
             <i class="fa-solid fa-xmark close"></i>
@@ -449,40 +440,7 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
     <script src="./detail/detail.js"></script>
 
-    <script>
-        // -- START-TOAST
-        const buttonToast = document.querySelector(".add-cart--icon"),
-            toast = document.querySelector(".toast");
-        (closeIcon = document.querySelector(".close")),
-        (progress = document.querySelector(".progress"));
 
-        let timer1, timer2;
-        console.log("toast", buttonToast);
-        buttonToast.addEventListener("click", () => {
-            toast.classList.add("active");
-            progress.classList.add("active");
-
-            timer1 = setTimeout(() => {
-                toast.classList.remove("active");
-            }, 5000); //1s = 1000 milliseconds
-
-            timer2 = setTimeout(() => {
-                progress.classList.remove("active");
-            }, 5300);
-        });
-
-        closeIcon.addEventListener("click", () => {
-            toast.classList.remove("active");
-
-            setTimeout(() => {
-                progress.classList.remove("active");
-            }, 300);
-
-            clearTimeout(timer1);
-            clearTimeout(timer2);
-        });
-        // --END-TOAST
-    </script>
 </body>
 
 </html>
