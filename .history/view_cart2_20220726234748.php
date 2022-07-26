@@ -68,7 +68,7 @@ session_start();
                                                         $result = $cart_item['price'] * $cart_item['quantity'];
                                                         echo number_format($result);
                                                         $sum += $result;
-                                                        ?> đ</span>
+                                                        ?></span>
                   </div>
                   <div class="cart-right-bottom">
                     <div class="cart-right-bottom--quantity">
@@ -91,17 +91,12 @@ session_start();
                 </div>
               </div>
               <span class="cart-item--line"></span>
-
+              <p class="cart-total-price">
+                <?php echo $sum ?>
+              </p>
             </div>
             <!-- END-ITEM  -->
           <?php endforeach ?>
-          <div class="cart-total-price" style="text-align: right;
-    margin-top: 40px;
-    font-size : 16px;
-    width: 100%;
-    padding-right: 15px;">
-            <p class="cart-total-price--title">Tổng tiền: <span style="font-size:18px ;"><?php echo number_format($sum) ?> đ</span></span></p>
-          </div>
         </div>
       </div>
     </div>

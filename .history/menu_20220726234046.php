@@ -75,7 +75,7 @@
                     </li>
                     <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
 
-                    <li><a href="view_cart2.php" class="nav-link nav-link--cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="view_cart2.php" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
 
                 <?php } ?>
 

@@ -98,9 +98,8 @@ session_start();
           <div class="cart-total-price" style="text-align: right;
     margin-top: 40px;
     font-size : 16px;
-    width: 100%;
-    padding-right: 15px;">
-            <p class="cart-total-price--title">Tổng tiền: <span style="font-size:18px ;"><?php echo number_format($sum) ?> đ</span></span></p>
+    width: 100%;">
+            <span class="cart-total-price--title">Tổng tiền: <?php echo number_format($sum) ?> đ</span>
           </div>
         </div>
       </div>

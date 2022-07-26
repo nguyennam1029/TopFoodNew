@@ -223,25 +223,6 @@ a.flash-item:hover {
     -webkit-box-decoration-break: clone;
 }
 
-.nav-link--cart {
-    position: relative;
-}
-
-.nav-link--cart::before {
-    content              : "";
-    position             : absolute;
-    top                  : 0;
-    right                : 0;
-    width                : 30px;
-    height               : 30px;
-    background-color     : #f1f1f1;
-    border-radius        : 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius   : 50%;
-    -ms-border-radius    : 50%;
-    -o-border-radius     : 50%;
-}
-
 /* ---------------START--Type-THỂ LOẠI---------- */
 .nav-item--type {
     position: relative;

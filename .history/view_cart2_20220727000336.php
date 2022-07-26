@@ -100,7 +100,7 @@ session_start();
     font-size : 16px;
     width: 100%;
     padding-right: 15px;">
-            <p class="cart-total-price--title">Tổng tiền: <span style="font-size:18px ;"><?php echo number_format($sum) ?> đ</span></span></p>
+            <p class="cart-total-price--title">Tổng tiền: <span><?php echo number_format($sum) ?> đ</span></span></p>
           </div>
         </div>
       </div>
