@@ -1,0 +1,23 @@
+.wrapper-insert--product {
+    background     : linear-gradient(45deg, #FC466B, #3F5EFB);
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.form-insert {
+    width                : 100%;
+    max-width            : 414px;
+    border-radius        : 30;
+    background           : rgba(255, 255, 255, 0.3);
+    border-left          : 1px solid rgba(255, 255, 255, 0.3);
+    border-top           : 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter      : blur(10px);
+    box-shadow           : 20px 20px 40px -6px rgb(0 0 0 / 20%);
+    text-align           : center;
+    -webkit-border-radius: 30;
+    -moz-border-radius   : 30;
+    -ms-border-radius    : 30;
+    -o-border-radius     : 30;
+}

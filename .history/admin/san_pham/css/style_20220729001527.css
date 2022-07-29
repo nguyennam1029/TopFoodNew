@@ -1,0 +1,15 @@
+.wrapper-insert--product {
+    background     : linear-gradient(45deg, #FC466B, #3F5EFB);
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.form-insert {
+    max-width    : 414px;
+    width        : 100%;
+    max-width    : 414px;
+    border-radius: 12px;
+
+}
