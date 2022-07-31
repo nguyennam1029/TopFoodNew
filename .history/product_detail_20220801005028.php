@@ -146,18 +146,14 @@ session_start();
                                             <li class="item list-cart">
                                                 <p class="cart-item buy-now">Mua ngay</p>
 
-                                                <?php if (empty($_SESSION['id'])) { ?>
-                                                    <p class="cart-item add-cart ">
-                                                        <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <span class="add-cart--title">Thêm vào giỏ hàng </span>
-                                                    </p>
-                                                <?php } else { ?>
-                                                    <p class="cart-item add-cart ">
-                                                        <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <button class="add-cart--title">Thêm vào giỏ hàng </button>
-                                                    </p>
-                                                <?php } ?>
+                                                <p class="cart-item add-cart <?php echo (empty($_SESSION['id'])) ? 'active-false' : '' ?>">
 
+                                                    <i class="fa-solid fa-cart-plus add-cart--icon"></i>
+
+
+                                                    <button class="add-cart--title">Thêm vào giỏ hàng </button>
+
+                                                </p>
                                             </li>
                                         </form>
 

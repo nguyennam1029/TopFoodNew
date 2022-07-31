@@ -126,6 +126,7 @@ session_start();
       <?php }
 
       ?>
+      <?php unset($_SESSION['cart']); ?>
 
 
     </div>

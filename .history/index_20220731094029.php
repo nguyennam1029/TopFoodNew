@@ -176,8 +176,8 @@ session_start();
       <div class="container">
         <div class="section-header">
           <p class="booton-text">
-            flash sale
-            <!-- <img style="filter: brightness(0%);" class="flash-sale--logo" src="images/flashsale.svg" alt="" /> -->
+
+            <img style="filter: brightness(0%);" class="flash-sale--logo" src="images/flashsale.svg" alt="" />
           </p>
         </div>
         <div class="movies-slide carousel-nav-center owl-carousel">
@@ -320,7 +320,7 @@ session_start();
 
 
 
-    <!-- --START-BANNER-HẢI SẢN   -->
+    <!-- --START-HẢI SẢN   -->
 
     <div class="section">
       <div class="container">
@@ -329,7 +329,7 @@ session_start();
         </div>
       </div>
     </div>
-    <!-- --END-BANNER-HẢI SẢN   -->
+    <!-- --END-HẢI SẢN   -->
 
 
 
@@ -374,62 +374,6 @@ session_start();
     </div>
     <!-- END-Thị bò  -->
 
-
-    <!-- --START-BANNER-HẢI SẢN   -->
-
-    <div class="section">
-      <div class="container">
-        <div class="banner">
-          <img src="images/banner/banner-thit-lon.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-    <!-- --END-BANNER-HẢI SẢN   -->
-
-
-
-
-    <!-- --START-THỊT HEO   -->
-    <div class="section" id="series">
-      <div class="container">
-        <div class="section-header">
-          <p class="booton-text">thịt heo</p>
-        </div>
-        <div class="movies-slide carousel-nav-center owl-carousel">
-          <?php
-          $sql = " select * from products where manufacturer_id=N'7' limit 10";
-          $result = mysqli_query($connect, $sql);
-          ?>
-          <?php foreach ($result as $flashSale) : ?>
-
-            <a href="product_detail.php?id=<?php echo $flashSale['id'] ?>" class="flash-item">
-              <img class="flash-image" src="./admin/san_pham/photos/<?php echo $flashSale['photo'] ?>" alt="" />
-              <div class="flash-item-content">
-                <p class="flash-item-title">
-                  <?php echo $flashSale['name'] ?>
-                </p>
-                <div class="flash-infos">
-                  <div class="flash-info">
-                    <i class="fa-solid fa-star"></i>
-                    <span>4.5</span>
-                  </div>
-
-                  <div class="flash-info">
-                    <span class="flash-info--price">
-                      <?php echo number_format($flashSale['price']) ?>
-                      đ</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          <?php endforeach ?>
-
-        </div>
-      </div>
-    </div>
-    <!-- END-THỊT HEO  -->
-
-
     <!-- -CONTACT- -->
     <div class="section">
       <div class="container">
@@ -446,7 +390,8 @@ session_start();
               <a href="#" class="contact-input--submit">Gửi</a>
             </div>
           </div>
-
+          <img class="contact-img--left" src="images/banner/contact2.png" alt="" />
+          <img class="contact-img--right" src="images/banner/contact1.png" alt="" />
         </div>
       </div>
     </div>

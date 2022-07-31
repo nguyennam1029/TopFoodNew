@@ -113,6 +113,7 @@ session_start();
               <!-- END-ITEM  -->
 
             <?php endforeach ?>
+            <?php unset($_SESSION['cart']); ?>
 
             <div class="cart-total-price" style="text-align: right;
     margin-top: 40px;

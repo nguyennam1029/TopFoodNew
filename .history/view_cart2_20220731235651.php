@@ -43,10 +43,8 @@ session_start();
     <!-- START-CART  -->
     <div class="cart-wrapper">
       <?php
-      if (isset($_SESSION['cart'])) {
-        $cart = $_SESSION['cart'];
-        $sum = 0;
-      }
+      $cart = $_SESSION['cart'];
+      $sum = 0;
 
       ?>
       <?php if (!isset($_SESSION['cart'])) { ?>
@@ -111,9 +109,9 @@ session_start();
 
               </div>
               <!-- END-ITEM  -->
+              <?php unset($_SESSION['cart']); ?>
 
             <?php endforeach ?>
-
             <div class="cart-total-price" style="text-align: right;
     margin-top: 40px;
     font-size : 16px;

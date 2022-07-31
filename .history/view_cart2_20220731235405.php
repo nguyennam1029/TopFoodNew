@@ -43,19 +43,16 @@ session_start();
     <!-- START-CART  -->
     <div class="cart-wrapper">
       <?php
-      if (isset($_SESSION['cart'])) {
-        $cart = $_SESSION['cart'];
-        $sum = 0;
-      }
+      $cart = $_SESSION['cart'];
+      $sum = 0;
 
       ?>
-      <?php if (!isset($_SESSION['cart'])) { ?>
+      <?php if (!isset($_SESSION['notiCart'])) { ?>
         <div class="noti">
           <div class="noti-content">
             <i class='bx bxs-bell-ring'></i>
             <span class="noti-title">Giỏ hàng trống</span>
             <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
-            <?php unset($_SESSION['cart']); ?>
 
           </div>
         </div>
@@ -111,9 +108,7 @@ session_start();
 
               </div>
               <!-- END-ITEM  -->
-
             <?php endforeach ?>
-
             <div class="cart-total-price" style="text-align: right;
     margin-top: 40px;
     font-size : 16px;

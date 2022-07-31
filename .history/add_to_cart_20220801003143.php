@@ -2,7 +2,7 @@
 session_start();
 $id = $_GET['id'];
 $quantity = $_GET['quantity'];
-if (!empty($_SESSION['name'])) {
+if (isset($_SESSION['name'])) {
     header("location:product_detail.php?id=$id&false='Vui lòng xem lại'");
 }
 if (empty($_SESSION['cart']['id'])) {

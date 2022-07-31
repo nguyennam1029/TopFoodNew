@@ -40,20 +40,6 @@ session_start();
                 -webkit-box-decoration-break: clone;
                 font-weight: 500;
             }
-
-            .active-false {
-                position: relative;
-            }
-
-            .active-false::before {
-                content: 'Vui lòng đăng kí';
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: #322d2d;
-            }
         </style>
 
         <!-- NAV -->
@@ -146,18 +132,13 @@ session_start();
                                             <li class="item list-cart">
                                                 <p class="cart-item buy-now">Mua ngay</p>
 
-                                                <?php if (empty($_SESSION['id'])) { ?>
-                                                    <p class="cart-item add-cart ">
-                                                        <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <span class="add-cart--title">Thêm vào giỏ hàng </span>
-                                                    </p>
-                                                <?php } else { ?>
-                                                    <p class="cart-item add-cart ">
-                                                        <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <button class="add-cart--title">Thêm vào giỏ hàng </button>
-                                                    </p>
-                                                <?php } ?>
+                                                <p class="cart-item add-cart">
+                                                    <i class="fa-solid fa-cart-plus add-cart--icon"></i>
 
+
+                                                    <button class="add-cart--title">Thêm vào giỏ hàng </button>
+
+                                                </p>
                                             </li>
                                         </form>
 

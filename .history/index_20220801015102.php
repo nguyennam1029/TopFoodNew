@@ -389,7 +389,7 @@ session_start();
 
 
 
-    <!-- --START-THỊT HEO   -->
+    <!-- --START-HẢI SẢN   -->
     <div class="section" id="series">
       <div class="container">
         <div class="section-header">
@@ -427,7 +427,7 @@ session_start();
         </div>
       </div>
     </div>
-    <!-- END-THỊT HEO  -->
+    <!-- END-Thị bò  -->
 
 
     <!-- -CONTACT- -->
@@ -446,7 +446,8 @@ session_start();
               <a href="#" class="contact-input--submit">Gửi</a>
             </div>
           </div>
-
+          <img class="contact-img--left" src="images/banner/contact2.png" alt="" />
+          <img class="contact-img--right" src="images/banner/contact1.png" alt="" />
         </div>
       </div>
     </div>

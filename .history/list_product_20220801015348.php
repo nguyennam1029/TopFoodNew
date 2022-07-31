@@ -49,7 +49,7 @@
                 <div class="showtime">
                   <div class="tab-list">
                     <div class="tab-item is-active" data-tab="all">All</div>
-                    <div class="tab-item" data-tab="Thịt bò">Thịt bò</div>
+                    <div class="tab-item" data-tab="Thịt bò">Thịt</div>
                     <div class="tab-item" data-tab="Shasimi">Shasimi</div>
                     <div class="tab-item" data-tab="Hải sản">Hải sản</div>
                     <div class="tab-item" data-tab="Thịt heo">Thịt heo</div>

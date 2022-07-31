@@ -40,20 +40,6 @@ session_start();
                 -webkit-box-decoration-break: clone;
                 font-weight: 500;
             }
-
-            .active-false {
-                position: relative;
-            }
-
-            .active-false::before {
-                content: 'Vui lòng đăng kí';
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: #322d2d;
-            }
         </style>
 
         <!-- NAV -->
@@ -138,26 +124,21 @@ session_start();
                                             <li class="item">
                                                 <span>Số lượng :</span>
                                                 <div class="quantity">
-                                                    <span class="quantity-item quantity-decrement" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</span>
+                                                    <span class="quantity-item quantity-decrement">-</span>
                                                     <input name="quantity" type="number" min="1" class="quantity-item quantity-title" value='1' />
-                                                    <span class="quantity-item quantity-increment" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</span>
+                                                    <span class="quantity-item quantity-increment">+</span>
                                                 </div>
                                             </li>
                                             <li class="item list-cart">
                                                 <p class="cart-item buy-now">Mua ngay</p>
 
-                                                <?php if (empty($_SESSION['id'])) { ?>
-                                                    <p class="cart-item add-cart ">
-                                                        <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <span class="add-cart--title">Thêm vào giỏ hàng </span>
-                                                    </p>
-                                                <?php } else { ?>
-                                                    <p class="cart-item add-cart ">
-                                                        <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <button class="add-cart--title">Thêm vào giỏ hàng </button>
-                                                    </p>
-                                                <?php } ?>
+                                                <p class="cart-item add-cart">
+                                                    <i class="fa-solid fa-cart-plus add-cart--icon"></i>
 
+
+                                                    <button class="add-cart--title">Thêm vào giỏ hàng </button>
+
+                                                </p>
                                             </li>
                                         </form>
 
@@ -415,7 +396,6 @@ session_start();
         });
         // --END-TOAST
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </body>
 
 </html>

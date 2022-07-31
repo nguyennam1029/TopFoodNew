@@ -431,25 +431,7 @@ session_start();
 
 
     <!-- -CONTACT- -->
-    <div class="section">
-      <div class="container">
-        <div class="contact">
-          <div class="contact-content">
-            <h2 class="contact-title">Hãy cho tôi biết suy nghĩ của bạn !</h2>
-            <span class="contact-des">
-              Nếu bạn cần chúng tôi, thì chúng tôi cần bạn hơn. Đơn giản vì
-              những lời góp ý của bạn đó là những thứ tạo nên những sản phẩm
-              chất lượng và thận thiện hơn
-            </span>
-            <div class="contact-input">
-              <input type="text" placeholder="Điền vào đây..." />
-              <a href="#" class="contact-input--submit">Gửi</a>
-            </div>
-          </div>
 
-        </div>
-      </div>
-    </div>
     <!-- END-CONTACT  -->
     <!-- FOOTER SECTION -->
     <?php include 'footer.php' ?>

@@ -43,91 +43,79 @@ session_start();
     <!-- START-CART  -->
     <div class="cart-wrapper">
       <?php
-      if (isset($_SESSION['cart'])) {
-        $cart = $_SESSION['cart'];
-        $sum = 0;
-      }
+      $cart = $_SESSION['cart'];
+      $sum = 0;
 
       ?>
-      <?php if (!isset($_SESSION['cart'])) { ?>
+      <?php if (!isset($_SESSION['notiCart'])) { ?>
         <div class="noti">
           <div class="noti-content">
             <i class='bx bxs-bell-ring'></i>
             <span class="noti-title">Giỏ hàng trống</span>
             <i class='bx bxs-bell-ring' style="margin-left: 6px; margin-right: 0;"></i>
-            <?php unset($_SESSION['cart']); ?>
 
           </div>
         </div>
-        <div class="noti-no-cart">
-          <img src="https://bizweb.dktcdn.net/100/360/810/themes/732049/assets/empty-cart.png?1621342550029" alt="">
+      <?php } ?>
+
+      <div class="container container-width">
+        <div class="section-header" style="margin-top: 40px;">
+          <p class="booton-text">Giỏ hàng</p>
         </div>
-      <?php } else { ?>
-        <div class="container container-width">
-          <div class="section-header" style="margin-top: 40px;">
-            <p class="booton-text">Giỏ hàng</p>
-          </div>
-          <div class="row">
-            <?php foreach ($cart as $id => $cart_item) : ?>
-              <!-- -START-ITEM  -->
-              <div class="col-12">
-                <div class="cart-item">
-                  <div class="cart-left">
-                    <img src="admin/san_pham/photos/<?php echo $cart_item['photo'] ?>" alt="">
-                  </div>
-                  <div class="cart-right">
-                    <div class="cart-right-top">
-                      <div class="cart-right-top--info">
-                        <h5 class="cart-right-top--name"><?php echo $cart_item['name'] ?></h5>
-                        <span class="cart-right-top--price"><?php echo number_format($cart_item['price']) ?><sup>đ</sup></span>
-                      </div>
-                      <span class="cart-right-top--total"><?php
-                                                          $result = $cart_item['price'] * $cart_item['quantity'];
-                                                          echo number_format($result);
-                                                          $sum += $result;
-                                                          ?> đ</span>
+        <div class="row">
+          <?php foreach ($cart as $id => $cart_item) : ?>
+            <!-- -START-ITEM  -->
+            <div class="col-12">
+              <div class="cart-item">
+                <div class="cart-left">
+                  <img src="admin/san_pham/photos/<?php echo $cart_item['photo'] ?>" alt="">
+                </div>
+                <div class="cart-right">
+                  <div class="cart-right-top">
+                    <div class="cart-right-top--info">
+                      <h5 class="cart-right-top--name"><?php echo $cart_item['name'] ?></h5>
+                      <span class="cart-right-top--price"><?php echo number_format($cart_item['price']) ?><sup>đ</sup></span>
                     </div>
-                    <div class="cart-right-bottom">
-                      <div class="cart-right-bottom--quantity">
-                        <a href="update_cart.php?id=<?php echo $id ?>&type=decre" class=" cart-right--link">-</a>
-                        <span class="cart-right--link cart-right--quantity"><?php echo $cart_item['quantity'] ?></span>
-                        <a href="update_cart.php?id=<?php echo $id ?>&type=incre" class="cart-right--link">+</a>
-                      </div>
-                      <div class="cart-right-bottom--btn">
+                    <span class="cart-right-top--total"><?php
+                                                        $result = $cart_item['price'] * $cart_item['quantity'];
+                                                        echo number_format($result);
+                                                        $sum += $result;
+                                                        ?> đ</span>
+                  </div>
+                  <div class="cart-right-bottom">
+                    <div class="cart-right-bottom--quantity">
+                      <a href="update_cart.php?id=<?php echo $id ?>&type=decre" class=" cart-right--link">-</a>
+                      <span class="cart-right--link cart-right--quantity"><?php echo $cart_item['quantity'] ?></span>
+                      <a href="update_cart.php?id=<?php echo $id ?>&type=incre" class="cart-right--link">+</a>
+                    </div>
+                    <div class="cart-right-bottom--btn">
 
-                        <a href="#" class="cart-right-bottom--save">
-                          <i class='bx bx-heart'></i>
-                          <span>Lưu</span>
-                        </a>
-                        <a href="delete_cart_item.php?id=<?php echo $id ?>" class="cart-right-bottom--delete">
-                          <i class='bx bx-trash'></i>
-                          <span>Xóa</span>
-                        </a>
-                      </div>
+                      <a href="#" class="cart-right-bottom--save">
+                        <i class='bx bx-heart'></i>
+                        <span>Lưu</span>
+                      </a>
+                      <a href="delete_cart_item.php?id=<?php echo $id ?>" class="cart-right-bottom--delete">
+                        <i class='bx bx-trash'></i>
+                        <span>Xóa</span>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <span class="cart-item--line"></span>
-
               </div>
-              <!-- END-ITEM  -->
+              <span class="cart-item--line"></span>
 
-            <?php endforeach ?>
-
-            <div class="cart-total-price" style="text-align: right;
+            </div>
+            <!-- END-ITEM  -->
+          <?php endforeach ?>
+          <div class="cart-total-price" style="text-align: right;
     margin-top: 40px;
     font-size : 16px;
     width: 100%;
     padding-right: 15px;">
-              <p class="cart-total-price--title">Tổng tiền: <span style="font-size:18px ;"><?php echo number_format($sum) ?> đ</span></span></p>
-            </div>
+            <p class="cart-total-price--title">Tổng tiền: <span style="font-size:18px ;"><?php echo number_format($sum) ?> đ</span></span></p>
           </div>
         </div>
-      <?php }
-
-      ?>
-
-
+      </div>
     </div>
     <!-- END-CART  -->
 

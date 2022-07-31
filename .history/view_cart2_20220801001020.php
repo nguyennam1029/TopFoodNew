@@ -114,6 +114,7 @@ session_start();
 
             <?php endforeach ?>
 
+
             <div class="cart-total-price" style="text-align: right;
     margin-top: 40px;
     font-size : 16px;

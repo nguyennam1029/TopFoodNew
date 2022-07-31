@@ -378,6 +378,18 @@
             color        : #fff;
         }
 
+        .active-false {
+            position: relative;
+        }
+
+        .active-false::before {
+            position        : absolute;
+            top             : 0;
+            right           : 0;
+            bottom          : 0;
+            left            : 0;
+            background-color: #322d2d;
+        }
 
         .list-cart {
             gap            : 20px;

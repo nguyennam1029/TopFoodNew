@@ -149,12 +149,12 @@ session_start();
                                                 <?php if (empty($_SESSION['id'])) { ?>
                                                     <p class="cart-item add-cart ">
                                                         <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <span class="add-cart--title">Thêm vào giỏ hàng </span>
+                                                        <button class="add-cart--title">Thêm vào giỏ hàng </button>
                                                     </p>
                                                 <?php } else { ?>
                                                     <p class="cart-item add-cart ">
                                                         <i class="fa-solid fa-cart-plus add-cart--icon"></i>
-                                                        <button class="add-cart--title">Thêm vào giỏ hàng </button>
+                                                        <span class="add-cart--title">Thêm vào giỏ hàng </span>
                                                     </p>
                                                 <?php } ?>
 

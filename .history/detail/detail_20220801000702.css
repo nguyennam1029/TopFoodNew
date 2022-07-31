@@ -379,6 +379,7 @@
         }
 
 
+
         .list-cart {
             gap            : 20px;
             display        : flex;
@@ -455,10 +456,4 @@
             color     : #f1f1f1;
             font-size : 16px;
             color     : #cacaca;
-        }
-
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin            : 0;
         }

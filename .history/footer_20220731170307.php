@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-3 col-md-6 col-sm-6">
                         <div class="content">
-                            <p><b>Topfood</b></p>
+                            <p><b>Movie Platform</b></p>
                             <ul class="footer-menu">
                                 <li><a href="#">About us</a></li>
                                 <li><a href="#">My profile</a></li>

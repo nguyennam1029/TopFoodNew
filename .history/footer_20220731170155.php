@@ -9,13 +9,13 @@
                     <p></p>
                     <div class="social-list">
                         <a href="#" class="social-item">
-                            <i class="fa-brands fa-facebook"></i>
+                            <i class="bx bxl-facebook"></i>
                         </a>
                         <a href="#" class="social-item">
-                            <i class="fa-brands fa-square-twitter"></i>
+                            <i class="bx bxl-twitter"></i>
                         </a>
                         <a href="#" class="social-item">
-                            <i class="fa-brands fa-square-instagram"></i>
+                            <i class="bx bxl-instagram"></i>
                         </a>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-3 col-md-6 col-sm-6">
                         <div class="content">
-                            <p><b>Topfood</b></p>
+                            <p><b>Movie Platform</b></p>
                             <ul class="footer-menu">
                                 <li><a href="#">About us</a></li>
                                 <li><a href="#">My profile</a></li>

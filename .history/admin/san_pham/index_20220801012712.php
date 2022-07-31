@@ -197,10 +197,16 @@
             </div>
             <div class="panigation">
                 <ul class="page-list">
-
+                    <?php
+                    if (isset($_GET['trang'])) {
+                        $page_number = $_GET['trang'];
+                    }
+                    ?>
                     <?php for ($i = 1; $i <= $so_trang; $i++) { ?>
-                        <a class="page-item <?php echo ($i == $trang) ? 'active' : '' ?>" href=" ?trang=<?php echo $i ?>&tim_kiem=<?php echo $tim_kiem ?>">
-                            <?php echo $i ?>
+                        <a class="page-item <?php echo ($i == $page_number) ? 'active' : '' ?> ||
+                                    <?php echo (isset($_GET['trang'])) ? 'active' : '' ?>" href=" ?trang=<?php echo $i ?>&tim_kiem=<?php echo $tim_kiem ?>">
+                            <?php
+                            echo $i ?>
                         </a>
                     <?php } ?>
 
