@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Messenger</title>
 
     <link rel="stylesheet" href="../../noti.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -98,8 +98,8 @@
 
                 <div class="recentOrders ">
                     <div class="cardHeader ">
-                        <h2>Các danh mục</h2>
-                        <a href="form_insert.php" class="custom-btn btn-11">Thêm danh mục</a>
+                        <h2>Phản hồi từ khách hàng</h2>
+
                     </div>
                     <?php
                     require('../connect.php');
@@ -113,8 +113,8 @@
                                     <th>Mã</th>
                                     <th>Tên danh mục</th>
 
-                                    <th>Mô tả</th>
-
+                                    <th>Địa chỉ</th>
+                                    <th>SĐT</th>
                                     <th>Sửa</th>
                                     <th>Xóa</th>
                                 </tr>
@@ -128,7 +128,7 @@
 
 
                                         <td><?php echo $each['address'] ?></td>
-
+                                        <td><?php echo $each['phone'] ?></td>
                                         <td>
                                             <a href="./form_update.php?id=<?php echo $each['id'] ?>">
                                                 <ion-icon name="create-outline" class="product-item--icon status delivered"></ion-icon>

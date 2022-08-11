@@ -1,5 +1,5 @@
 <?php
-
+require '../check_admin_login.php';
 $id = $_POST['id'];
 
 if (empty($_POST['name'])  || empty($_POST['price'])) {

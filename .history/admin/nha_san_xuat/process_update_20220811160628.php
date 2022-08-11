@@ -7,20 +7,21 @@ if (empty($_POST['id'])) {
 
 $id = $_POST['id'];
 
-if (empty($_POST['namensx']) || empty($_POST['address'])) {
+if (empty($_POST['namensx']) || empty($_POST['address']) || empty($_POST['phone'])) {
     header("location:form_update.php?id=$id&error=phải điền đầy đủ thông tin");
     exit;
 }
 
 $namensx = $_POST['namensx'];
 $address = $_POST['address'];
-
+$phone = $_POST['phone'];
 require '../connect.php';
 
 $sql = "update manufacturers 
 set
 namensx = '$namensx',
-address = '$address'
+address = '$address',
+phone = '$phone'
 where 
 id = '$id'
 ";
