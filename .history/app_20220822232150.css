@@ -1242,13 +1242,6 @@ footer a.logo:hover {
     -o-transition     : .2 ease-in;
 }
 
-.info-left--item.active {
-    background                  : linear-gradient(to right, #ff8a00, #ff2070);
-    -webkit-background-clip     : text;
-    -webkit-text-fill-color     : transparent;
-    -webkit-box-decoration-break: clone;
-}
-
 .info-left--item:hover {
     background                  : linear-gradient(to right, #ff8a00, #ff2070);
     -webkit-background-clip     : text;
@@ -1281,45 +1274,29 @@ footer a.logo:hover {
     -o-border-radius     : 50%;
 }
 
-.form-top--info h4 {
-    font-size  : 22px;
-    font-weight: 400;
-    color      : #f1f1f1;
-
-}
-
-.form-top--info span {
-    font-size  : 16px;
-    font-weight: 400;
-    color      : #b9b9b9;
-
-}
-
 .form-group {
     display        : flex;
     justify-content: center;
     align-items    : center;
     gap            : 20px;
-    color          : #9b9b9b;
-    margin-bottom  : 20px;
 }
 
 .form-item {
-    width: 40%;
+    width: 50%;
 }
 
 .form-item--title {
-    font-size    : 16px;
-    font-weight  : 400;
-    display      : block;
-    margin-bottom: 10px;
+    font-size  : 1.6px;
+    font-weight: 400;
+    display    : block;
+    margin     : 10px 0;
 }
 
 .form-item--input {
     width                : 100%;
     padding              : 10px 6px;
     border               : 1px solid #9b9b9b;
-    color                : #f1f1f1;
+    color                : #ffff;
     background           : transparent;
     outline              : none;
     border-radius        : 6px;
@@ -1327,10 +1304,6 @@ footer a.logo:hover {
     -moz-border-radius   : 6px;
     -ms-border-radius    : 6px;
     -o-border-radius     : 6px;
-}
-
-.info-user--btn {
-    margin: 40px auto 0;
 }
 
 /* ==================end edit user============== */

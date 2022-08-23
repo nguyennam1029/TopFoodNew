@@ -206,8 +206,7 @@
                 excule: ".noExl",
                 name: "Worksheet Name",
                 filename: "Hóa đơn TopFood",
-                fileext: ".xls",
-                preserveColors: true
+                fileext: ".xls"
             })
         });
     </script>

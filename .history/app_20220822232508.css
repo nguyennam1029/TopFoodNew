@@ -1242,13 +1242,6 @@ footer a.logo:hover {
     -o-transition     : .2 ease-in;
 }
 
-.info-left--item.active {
-    background                  : linear-gradient(to right, #ff8a00, #ff2070);
-    -webkit-background-clip     : text;
-    -webkit-text-fill-color     : transparent;
-    -webkit-box-decoration-break: clone;
-}
-
 .info-left--item:hover {
     background                  : linear-gradient(to right, #ff8a00, #ff2070);
     -webkit-background-clip     : text;
@@ -1281,20 +1274,6 @@ footer a.logo:hover {
     -o-border-radius     : 50%;
 }
 
-.form-top--info h4 {
-    font-size  : 22px;
-    font-weight: 400;
-    color      : #f1f1f1;
-
-}
-
-.form-top--info span {
-    font-size  : 16px;
-    font-weight: 400;
-    color      : #b9b9b9;
-
-}
-
 .form-group {
     display        : flex;
     justify-content: center;
@@ -1305,7 +1284,7 @@ footer a.logo:hover {
 }
 
 .form-item {
-    width: 40%;
+    width: 50%;
 }
 
 .form-item--title {
@@ -1330,7 +1309,7 @@ footer a.logo:hover {
 }
 
 .info-user--btn {
-    margin: 40px auto 0;
+    margin: 10px auto;
 }
 
 /* ==================end edit user============== */

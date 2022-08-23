@@ -125,8 +125,8 @@
                                     <th>Thời gian đặt</th>
                                     <th>Tổng tiền</th>
                                     <th>Trạng thái</th>
-                                    <th class="noExl">Chi tiết</th>
-                                    <th class="noExl">Sửa</th>
+                                    <th>Chi tiết</th>
+                                    <th>Sửa</th>
                                 </tr>
                             </thead>
 
@@ -159,10 +159,10 @@
                                                     break;
                                             }
                                             ?></td>
-                                        <td class="noExl"><a href="detail.php?id=<?php echo $each['id'] ?>">
+                                        <td><a href="detail.php?id=<?php echo $each['id'] ?>">
                                                 xem
                                             </a></td>
-                                        <td class="noExl"><a href="update.php?id=<?php echo $each['id'] ?>&status=1">
+                                        <td><a href="update.php?id=<?php echo $each['id'] ?>&status=1">
                                                 duyệt
                                             </a><br>
                                             <a href="update.php?id=<?php echo $each['id'] ?>&status=2">
@@ -203,11 +203,9 @@
     <script>
         $("button").click(function() {
             $("#table2excel").table2excel({
-                excule: ".noExl",
                 name: "Worksheet Name",
-                filename: "Hóa đơn TopFood",
-                fileext: ".xls",
-                preserveColors: true
+                filename: "FileExcel",
+                fileext: ".xls"
             })
         });
     </script>

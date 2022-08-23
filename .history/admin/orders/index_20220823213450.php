@@ -125,8 +125,8 @@
                                     <th>Thời gian đặt</th>
                                     <th>Tổng tiền</th>
                                     <th>Trạng thái</th>
-                                    <th class="noExl">Chi tiết</th>
-                                    <th class="noExl">Sửa</th>
+                                    <th>Chi tiết</th>
+                                    <th>Sửa</th>
                                 </tr>
                             </thead>
 
@@ -159,10 +159,10 @@
                                                     break;
                                             }
                                             ?></td>
-                                        <td class="noExl"><a href="detail.php?id=<?php echo $each['id'] ?>">
+                                        <td><a href="detail.php?id=<?php echo $each['id'] ?>">
                                                 xem
                                             </a></td>
-                                        <td class="noExl"><a href="update.php?id=<?php echo $each['id'] ?>&status=1">
+                                        <td><a href="update.php?id=<?php echo $each['id'] ?>&status=1">
                                                 duyệt
                                             </a><br>
                                             <a href="update.php?id=<?php echo $each['id'] ?>&status=2">
@@ -195,19 +195,17 @@
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./jquery.table2excel.min.js"></script>
     <script>
         $("button").click(function() {
             $("#table2excel").table2excel({
-                excule: ".noExl",
                 name: "Worksheet Name",
-                filename: "Hóa đơn TopFood",
-                fileext: ".xls",
-                preserveColors: true
+                filename: "FileExcel",
+                fileext: ".xls"
             })
         });
     </script>

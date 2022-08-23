@@ -1281,20 +1281,6 @@ footer a.logo:hover {
     -o-border-radius     : 50%;
 }
 
-.form-top--info h4 {
-    font-size  : 22px;
-    font-weight: 400;
-    color      : #f1f1f1;
-
-}
-
-.form-top--info span {
-    font-size  : 16px;
-    font-weight: 400;
-    color      : #b9b9b9;
-
-}
-
 .form-group {
     display        : flex;
     justify-content: center;

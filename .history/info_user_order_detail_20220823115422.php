@@ -10,7 +10,7 @@
 <body>
     <?php
     $oder_id = $_GET['id'];
-    require '../connect.php';
+    require './admin/connect.php';
 
     $sql = "select
     *
@@ -35,7 +35,7 @@
             <?php foreach ($result as  $each) :  ?>
 
         <tr>
-            <td><img height='100' src="../san_pham/photos/<?php echo $each['photo'] ?>"></td>
+            <td><img height='100' src="./admin/san_pham/photos/ echo $each['photo'] ?>"> </td>
             <td><?php echo $each['name'] ?></td>
             <td><?php echo $each['price'] ?></td>
             <td><?php echo $each['quantity'] ?></td>
