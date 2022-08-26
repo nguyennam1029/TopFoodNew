@@ -66,8 +66,6 @@
 
         }
 
-
-
         #style-7::-webkit-scrollbar-track {
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
             background-color: #F5F5F5;
@@ -150,8 +148,7 @@
                                     <th>Tổng tiền</th>
                                     <th>Trạng thái</th>
                                     <th class="noExl">Chi tiết</th>
-                                    <th class="noExl">Cập nhật</th>
-                                    <th class="noExl">Xóa</th>
+                                    <th class="noExl">Sửa</th>
                                 </tr>
                             </thead>
 
@@ -159,13 +156,13 @@
                                 <?php foreach ($result as $each) : ?>
                                     <tr>
                                         <td><?php echo $each['id'] ?></td>
-                                        <td style="text-align: left;">- <?php echo $each['name_receiver'] ?><br>
-                                            - <?php echo $each['phone'] ?><br>
-                                            - <?php echo $each['address_receiver'] ?><br>
+                                        <td><?php echo $each['name_receiver'] ?><br>
+                                            <?php echo $each['phone'] ?><br>
+                                            <?php echo $each['address_receiver'] ?><br>
                                         </td>
-                                        <td style="text-align: left;">- <?php echo $each['name'] ?><br>
-                                            - <?php echo $each['phone'] ?><br>
-                                            - <?php echo $each['address'] ?><br></td>
+                                        <td><?php echo $each['name'] ?><br>
+                                            <?php echo $each['phone'] ?><br>
+                                            <?php echo $each['address'] ?><br></td>
 
 
                                         <td><?php echo $each['created_at'] ?></td>
@@ -216,13 +213,6 @@
 
                                             <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status return">
                                                 <ion-icon name="remove-circle-outline"></ion-icon> Hủy
-                                            </a>
-                                            <br>
-
-                                        </td>
-                                        <td>
-                                            <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status delete">
-                                                <ion-icon name="trash"></ion-icon>
                                             </a>
                                         </td>
 

@@ -11,18 +11,18 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="./sty.css">
     <style>
-        .active-bg--category {
+        .active-bg--mess {
             background-color: var(--white) !important;
             pointer-events: none;
 
         }
 
-        .active-text--category {
+        .active-text--mess {
             color: var(--blue) !important;
 
         }
 
-        .active-text--category::before {
+        .active-text--mess::before {
             content: "";
             position: absolute;
             right: 0;
@@ -35,7 +35,7 @@
             pointer-events: none;
         }
 
-        .active-text--category::after {
+        .active-text--mess::after {
             content: "";
             position: absolute;
             right: 0;
@@ -46,6 +46,22 @@
             border-radius: 50%;
             box-shadow: 35px -35px 0 10px var(--white);
             pointer-events: none;
+        }
+
+        .textarea {
+            height: 80px;
+            resize: none;
+            background: transparent;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            text-align: center;
+            color: #000;
+            border: 1px solid #9b9b9b;
+
         }
     </style>
 </head>
@@ -107,7 +123,7 @@
                     $result = mysqli_query($connect, $sql);
                     ?>
                     <div class="sticky-table">
-                        <table>
+                        <table width="100%">
                             <thead>
                                 <tr>
                                     <th>Mã</th>
@@ -129,7 +145,11 @@
 
                                         <td><?php echo $each['email'] ?></td>
                                         <td><?php echo $each['phone'] ?></td>
-                                        <td><?php echo $each['message'] ?></td>
+                                        <td>
+                                            <textarea class="textarea" name="" id="" cols="30" rows="10">
+                                                <?php echo $each['message'] ?>
+                                            </textarea>
+                                        </td>
 
 
                                     </tr>

@@ -100,21 +100,7 @@ session_start();
                                             <td><?php echo $each['phone_receiver'] ?></td>
                                             <td><?php echo number_format($each['total_price']) ?> đ</td>
                                             <td>
-                                                <span class="status  
-                                                <?php
-                                                switch ($each['status']) {
-                                                    case '0':
-                                                        echo "pending";
-                                                        break;
-                                                    case '1':
-                                                        echo "inProgress";
-                                                        break;
-                                                    case '2':
-                                                        echo "return";
-                                                        break;
-                                                }
-                                                ?>
-                                                ">
+                                                <span class="status pending">
                                                     <?php
                                                     switch ($each['status']) {
                                                         case '0':
@@ -132,7 +118,6 @@ session_start();
                                             </td>
                                             <td>
                                                 <a href="info_user_order_detail.php?id=<?php echo $each['id'] ?>">
-
                                                     <span class="product-item--icon status delivered" style="font-size: 16px;">Xem</span>
                                                 </a>
                                             </td>

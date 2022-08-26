@@ -9,4 +9,4 @@ require '../connect.php';
 
 $sql = "update oders set status = $status where id = '$id'";
 mysqli_query($connect, $sql);
-header('location:index.php?success');
+header('location:index.php?sucess');

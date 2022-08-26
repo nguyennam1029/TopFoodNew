@@ -34,7 +34,7 @@
                 <?php   } else { ?>
 
                     <li>
-                        <a class="avatarlink" href="./info_user.php">
+                        <a class="avatarlink " href="./info_user.php">
                             <div class="avatarlink-list" style="
                             display        : flex;
                             justify-content: center;
@@ -50,7 +50,7 @@
                                     object-fit   : cover;
                                     width        : 100%;">
                                 </div>
-                                <span class="avatarlink-item--name"><?php echo $_SESSION['name'] ?></span>
+                                <span class="avatarlink-item--name nav-link"><?php echo $_SESSION['name'] ?></span>
                             </div>
                         </a>
                     </li>

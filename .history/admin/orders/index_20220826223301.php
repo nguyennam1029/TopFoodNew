@@ -221,7 +221,7 @@
 
                                         </td>
                                         <td>
-                                            <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status delete">
+                                            <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status return">
                                                 <ion-icon name="trash"></ion-icon>
                                             </a>
                                         </td>

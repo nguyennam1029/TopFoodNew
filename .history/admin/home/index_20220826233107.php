@@ -45,16 +45,6 @@
             box-shadow: 35px -35px 0 10px var(--white);
             pointer-events: none;
         }
-
-        .chart {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            width: 100%;
-            border: 1px solid #9b9b9b;
-            padding: 20px;
-        }
     </style>
 </head>
 
@@ -70,23 +60,22 @@
             ?>
 
             <!-- ======================= Cards ================== -->
-
             <div class="cardBox">
                 <div class="card">
                     <div>
                         <div class="numbers">1,504</div>
-                        <div class="cardName">Người dùng</div>
+                        <div class="cardName">Daily Views</div>
                     </div>
 
                     <div class="iconBx">
-                        <ion-icon name="person-outline"></ion-icon>
+                        <ion-icon name="eye-outline"></ion-icon>
                     </div>
                 </div>
 
                 <div class="card">
                     <div>
                         <div class="numbers">80</div>
-                        <div class="cardName">Sản phẩm</div>
+                        <div class="cardName">Sales</div>
                     </div>
 
                     <div class="iconBx">
@@ -97,7 +86,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">284</div>
-                        <div class="cardName">Tin nhắn</div>
+                        <div class="cardName">Comments</div>
                     </div>
 
                     <div class="iconBx">
@@ -108,7 +97,7 @@
                 <div class="card">
                     <div>
                         <div class="numbers">$7,842</div>
-                        <div class="cardName">Tổng doanh thu</div>
+                        <div class="cardName">Earning</div>
                     </div>
 
                     <div class="iconBx">
@@ -116,9 +105,62 @@
                     </div>
                 </div>
             </div>
-            <div class="chart">
-                <img src="../../images/chart.png" alt="">
-            </div>
+
+            <main>
+                <section>
+                    <div class="rad-body-wrapper">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 col-xs-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Area Chart</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div id="areaChart" class="rad-chart"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-xs-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Line Chart</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div id="lineChart" class="rad-chart"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- here-->
+                                <div class="col-lg-4 col-md-6 col-xs-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Donut Chart</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div id="donutChart" class="rad-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Bar Chart</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div id="barChart" class="rad-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
         </div>
     </div>

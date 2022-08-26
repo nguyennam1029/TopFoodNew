@@ -36,6 +36,60 @@ session_start();
             -webkit-text-fill-color: transparent;
             -webkit-box-decoration-break: clone;
         }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8) !important;
+
+            cursor: pointer;
+        }
+
+        .modal-content {
+            background-color: white;
+            width: 100%;
+            max-width: 368px;
+
+            border-radius: 12px;
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 100rem;
+            color: white;
+            background-color: #eee;
+            padding: 5px;
+            transform: translate(50%, -50%);
+        }
+
+        .modal-main {
+            overscroll-behavior-y: contain;
+        }
+
+        .modal-main--des {
+            font-size: 16px;
+            color: #000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 
@@ -61,7 +115,7 @@ session_start();
         ?>
 
         <?php if (isset($_GET['success'])) { ?>
-            <div class="noti">
+            <div class="noti" style="z-index: 99999;">
                 <div class="noti-content">
                     <i class='bx bxs-bell-ring'></i>
                     <span class="noti-title"><?php echo $_GET['success'] ?></span>
@@ -70,6 +124,30 @@ session_start();
                 </div>
             </div>
         <?php } ?>
+
+        <!-- ==================MODAL=========== -->
+        <?php if (isset($_GET['success'])) { ?>
+            <style>
+
+            </style>
+            <div class="modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <a href="./info_user.php" class="modal-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </a>
+                    <div class="modal-main">
+                        <p class="modal-main--des">
+                            TopFood xin lỗi về sự bất tiện này bạn vui lòng đăng nhập lại. " Để cập nhật thông tin - xin cảm ơn bạn "
+                        </p>
+                        <a href="./sign_out.php" class="custom-btn btn-11 hover-active">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+
         <?php if (isset($_GET['err'])) { ?>
             <div class="noti">
                 <div class="noti-content">
@@ -82,12 +160,13 @@ session_start();
         <?php } ?>
         <!--START CONTAINER  -->
         <div class="container">
+
             <div class="row">
-                <div class="col-4">
+                <div class="col-3 col-sm-12">
                     <?php include 'menu_user.php'
                     ?>
                 </div>
-                <div class="col-8">
+                <div class="col-9 col-sm-12">
                     <div class="info-right">
                         <div class="form-top">
                             <img src="./images/user_img/user.jpg" alt="">

@@ -132,7 +132,7 @@ session_start();
                                             </td>
                                             <td>
                                                 <a href="info_user_order_detail.php?id=<?php echo $each['id'] ?>">
-
+                                                    <ion-icon name="eye"></ion-icon>
                                                     <span class="product-item--icon status delivered" style="font-size: 16px;">Xem</span>
                                                 </a>
                                             </td>

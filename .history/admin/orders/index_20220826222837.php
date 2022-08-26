@@ -150,8 +150,7 @@
                                     <th>Tổng tiền</th>
                                     <th>Trạng thái</th>
                                     <th class="noExl">Chi tiết</th>
-                                    <th class="noExl">Cập nhật</th>
-                                    <th class="noExl">Xóa</th>
+                                    <th class="noExl">Sửa</th>
                                 </tr>
                             </thead>
 
@@ -218,11 +217,8 @@
                                                 <ion-icon name="remove-circle-outline"></ion-icon> Hủy
                                             </a>
                                             <br>
-
-                                        </td>
-                                        <td>
-                                            <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status delete">
-                                                <ion-icon name="trash"></ion-icon>
+                                            <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status return">
+                                                <ion-icon name="remove-circle-outline"></ion-icon> Xóa
                                             </a>
                                         </td>
 

@@ -170,7 +170,7 @@
 
                                             </div>
                                         </td>
-                                        <td><?php echo $each['price'] ?></td>
+                                        <td><?php echo number_format($each['price']) ?> đ</td>
                                         <td><?php echo $each['manufacturer_name'] ?></td>
                                         <td>
                                             <a href="form_update2.php?id=<?php echo $each['id'] ?>">

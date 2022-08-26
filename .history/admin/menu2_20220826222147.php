@@ -5,7 +5,7 @@
                 <span class="icon">
                     <ion-icon name="logo-ionitron"></ion-icon>
                 </span>
-                <span class="title">Admin</span>
+                <span class="title">Brand Name</span>
             </a>
         </li>
 

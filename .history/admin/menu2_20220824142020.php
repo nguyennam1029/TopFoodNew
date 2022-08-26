@@ -3,9 +3,9 @@
         <li>
             <a href="#">
                 <span class="icon">
-                    <ion-icon name="logo-ionitron"></ion-icon>
+                    <ion-icon name="logo-apple"></ion-icon>
                 </span>
-                <span class="title">Admin</span>
+                <span class="title">Brand Name</span>
             </a>
         </li>
 
