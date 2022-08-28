@@ -5,6 +5,7 @@
 .cart-item {
     display: flex;
     color  : #d1d1d1;
+
 }
 
 
@@ -93,13 +94,15 @@
 
 .cart-right-bottom--btn {
     display        : flex;
+    gap            : 20px;
     justify-content: center;
     align-items    : center;
 }
 
-.cart-right-bottom--save {
-    margin-right: 26px;
-    font-size   : 16px;
+.cart-right-bottom--save,
+.cart-right-bottom--delete {
+
+    font-size: 16px;
 }
 
 .cart-item--line {
@@ -108,6 +111,7 @@
     width     : 100%;
     display   : block;
     margin-top: 20px;
+
 }
 
 .cart-total-price {
@@ -161,4 +165,18 @@
 .formby-btn {
     margin-left: auto;
     margin-top : 30px;
+}
+
+@media (max-width: 740px) {
+    .cart-right-top {
+        gap: 12px;
+    }
+
+    .cart-right-top--name {
+        font-size: 16px;
+    }
+
+    .cart-right-top--total {
+        font-size: 16px;
+    }
 }

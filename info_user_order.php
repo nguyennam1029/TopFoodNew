@@ -72,6 +72,7 @@ session_start();
                     <?php include 'menu_user.php'
                     ?>
                 </div>
+
                 <div class="col-10 col-sm-12">
                     <div class="info-right">
                         <div class="sticky-table">

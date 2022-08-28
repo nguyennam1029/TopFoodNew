@@ -36,9 +36,7 @@
               <label for="" class="form-label">Password</label>
             </div>
 
-            <div class="form-forgot">
-              <a href="#" class="form-login--link">Quên mật khẩu ?</a>
-            </div>
+
             <div class="form-checkmark">
               <input type="checkbox" class="form-checkmark--input" />
               <label for="" class="form-checkmark--text">Nhớ mật khẩu</label>

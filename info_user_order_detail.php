@@ -67,11 +67,11 @@ session_start();
         <!--START CONTAINER  -->
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 col-sm-12">
                     <?php include 'menu_user.php'
                     ?>
                 </div>
-                <div class="col-9">
+                <div class="col-9 col-sm-12">
                     <div class="info-right">
                         <div class="sticky-table">
                             <table>
@@ -145,8 +145,10 @@ session_start();
         </a>
         <!--END BACK TO TOP -->
 
-        <script src="./list_product/product.js"></script>
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

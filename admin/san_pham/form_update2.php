@@ -81,6 +81,7 @@
 
                     <div class="form-insert-input--btn">
                          <button name="create" class="custom-btn btn-11 hover-active">Sửa</button>
+                         <a href="./index.php" class="back-home custom-btn btn-11">Quay lại</a>
 
                     </div>
                </form>

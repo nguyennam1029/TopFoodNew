@@ -71,10 +71,32 @@
 
             <!-- ======================= Cards ================== -->
 
+            <?php
+            require '../connect.php';
+
+            // dem là nó sẽ tạo ra 1 cột dem để ghi tổng
+            //nó trả về mảng kết hợp
+            $product = mysqli_query($connect, "SELECT COUNT(*) as 'dem' FROM products");
+            $result_product = mysqli_fetch_assoc($product);
+
+            $users = mysqli_query($connect, "SELECT COUNT(*) as 'dem' FROM user");
+            $result_users = mysqli_fetch_assoc($users);
+
+            $orders = mysqli_query($connect, "SELECT COUNT(*) as 'dem' FROM oders where status = 1");
+            $result_orders = mysqli_fetch_assoc($orders);
+
+            $category = mysqli_query($connect, "SELECT COUNT(*) as 'dem' FROM manufacturers ");
+            $result_category = mysqli_fetch_assoc($category);
+
+            $message = mysqli_query($connect, "SELECT COUNT(*) as 'dem' FROM  contact ");
+            $result_message = mysqli_fetch_assoc($message);
+
+
+            ?>
             <div class="cardBox">
                 <div class="card">
                     <div>
-                        <div class="numbers">1,504</div>
+                        <div class="numbers"><?php echo $result_users['dem']; ?></div>
                         <div class="cardName">Người dùng</div>
                     </div>
 
@@ -85,7 +107,7 @@
 
                 <div class="card">
                     <div>
-                        <div class="numbers">80</div>
+                        <div class="numbers"><?php echo $result_product['dem'] ?></div>
                         <div class="cardName">Sản phẩm</div>
                     </div>
 
@@ -96,12 +118,34 @@
 
                 <div class="card">
                     <div>
-                        <div class="numbers">284</div>
+                        <div class="numbers"><?php echo $result_orders['dem'] ?></div>
+                        <div class="cardName">Đơn hàng thành công</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers"><?php echo $result_message['dem']; ?></div>
                         <div class="cardName">Tin nhắn</div>
                     </div>
 
                     <div class="iconBx">
                         <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers"><?php echo $result_category['dem']; ?></div>
+                        <div class="cardName">Danh mục</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="apps"></ion-icon>
                     </div>
                 </div>
 
@@ -116,9 +160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="chart">
-                <img src="../../images/chart.png" alt="">
-            </div>
+
 
         </div>
     </div>

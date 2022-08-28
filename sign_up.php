@@ -20,7 +20,7 @@ session_start();
       unset($_SESSION['error']);
     } ?>
     <div class="modal-overlay active" style="
-    background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
+    background: url('./images/banner/bannerloginsigup.jpg') top center / cover no-repeat !important;
     
     "></div>
     <div class="modal-content">
@@ -77,7 +77,7 @@ session_start();
             <div class="create-account">
               <span class="create-account--text">
                 Nếu bạn đã có tài khoản !
-                <a href="sign_in.php" target="_selfe" class="create-account--link">Login</a>
+                <a href="sign_in.php" target="_selfe" class="create-account--link">Đăng nhập</a>
               </span>
             </div>
             <div class="sign-with">

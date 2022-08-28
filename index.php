@@ -1,6 +1,8 @@
 <?php
 session_start();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,62 +51,41 @@ session_start();
       </div>
     <?php } ?>
 
+    <?php if (isset($_GET['success'])) { ?>
+      <div class="noti">
+        <div class="noti-content">
+          <i class="fa-solid fa-truck-moving"></i>
+          <span class="noti-title">Đơn hàng đang xử lý ...</span>
 
+
+        </div>
+      </div>
+    <?php } ?>
     <!-- HERO SECTION -->
     <div class="hero-section">
       <!-- HERO SLIDE -->
       <div class="hero-slide">
         <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+
           <!-- SLIDE ITEM -->
           <div class="hero-slide-item">
-            <img src="./images/banner/banner1.jpg" alt="" />
+            <img src="./images/banner/vc.jpg" alt="" />
             <div class="overlay"></div>
             <div class="hero-slide-item-content">
               <div class="item-content-wraper">
                 <div class="item-content-title top-down">
-                  <p class="item-content-title--color">Cách sắp xếp bàn ăn</p>
+                  <div class="item-content-title--color">
+                    Vịt quay Bắc Kinh
+                  </div>
                 </div>
                 <div class="flash-infos top-down delay-2"></div>
                 <div class="item-content-description top-down delay-4">
-                  Đĩa đựng món ăn chính sẽ đặt ngay chính giữa vị trí ngồi của
-                  thực khách, đĩa salad được đặt bên trên đĩa món ăn chính và
-                  đĩa bánh mì sẽ nằm ở góc trên bên trái. Khăn ăn bạn phải gấp
-                  gọn gàng và đặt bên trái hoặc phía trên đĩa món ăn chính.
-                  Các dụng cụ nằm bên phải đĩa món ăn chính sẽ là dao ăn, thìa
-                  ăn và thìa súp
+                  Vịt quay Bắc Kinh là món ăn nổi tiếng bởi sự hấp dẫn thơm ngon của phần da vịt bóng vàng, đẹp mắt. Mặc dù tốn nhiều thời gian, nhưng nhiều người vẫn muốn tự tay chế biến món ăn này tại nhà
                 </div>
                 <div class="item-action top-down delay-6">
-                  <a href="./detail/eveng.html" class="custom-btn block btn-11">
+                  <a href="./detail/WandaVision.html" class="custom-btn block btn-11">
                     <i class="bx bxs-right-arrow"></i>
-                    <span>Xem Ngay</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- END SLIDE ITEM -->
-          <!-- SLIDE ITEM -->
-          <div class="hero-slide-item">
-            <img src="./images/banner/banner2.jpg" alt="" />
-            <div class="overlay"></div>
-            <div class="hero-slide-item-content">
-              <div class="item-content-wraper">
-                <div class="item-content-title top-down">
-                  <p class="item-content-title--color">Món gỏi</p>
-                </div>
-                <div class="flash-infos top-down delay-2"></div>
-                <div class="item-content-description top-down delay-4">
-                  Chỉ bằng vài bước vào bếp vừa đơn giản lại vừa nhanh chóng,
-                  bạn đã có thể chiêu đãi cho cả nhà bữa ăn dinh dưỡng, hấp
-                  dẫn với món gỏi bồn bồn thơm ngon này rồi. Dĩa gỏi thơm lừng
-                  kích thích vị giác vô cùng, bồn bồn giòn giòn, tươi ngon,
-                  ngấm đều vị nước trộn chua chua ngọt ngọt, ăn cùng với miếng
-                  bánh phồng tôm nữa là hết sẩy.
-                </div>
-                <div class="item-action top-down delay-6">
-                  <a href="./detail/avatar.html" class="custom-btn block btn-11">
-                    <i class="bx bxs-right-arrow"></i>
-                    <span>Xem Ngay</span>
+                    <span>Mua Ngay</span>
                   </a>
                 </div>
               </div>
@@ -114,31 +95,56 @@ session_start();
 
           <!-- SLIDE ITEM -->
           <div class="hero-slide-item">
-            <img src="./images/banner/banner3.jpg" alt="" />
+            <img src="./images/banner/banner6.jpg" alt="" />
             <div class="overlay"></div>
             <div class="hero-slide-item-content">
               <div class="item-content-wraper">
                 <div class="item-content-title top-down">
                   <div class="item-content-title--color">
-                    Cách chọn rau, củ, quả
+                    Rau, củ, quả Đà Lạt
                   </div>
                 </div>
                 <div class="flash-infos top-down delay-2"></div>
                 <div class="item-content-description top-down delay-4">
-                  Rau củ và quả tươi có màu sắc tự nhiên, không bị héo úa.
-                  Không có bất kì màu sắc bất thường nào. Bạn nên chú ý các
-                  loại củ quả màu xanh hoặc có màu sắc khá thất thường
+                  Với nhiều năm hoạt động, RAU SẠCH XANH - RAU CỦ QUẢ đang dần trở thành nhà cung cấp rau củ quả quen thuộc và tin cậy của nhiều siêu thị, nhà hàng, bếp ăn,.... trên địa bàn TP.HCM, Bình Dương, Đồng Nai,... và các tỉnh lân cận.
                 </div>
                 <div class="item-action top-down delay-6">
                   <a href="./detail/WandaVision.html" class="custom-btn block btn-11">
                     <i class="bx bxs-right-arrow"></i>
-                    <span>Xem Ngay</span>
+                    <span>Mua Ngay</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <!-- END SLIDE ITEM -->
+
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./images/banner/bannerpiza.jpg" alt="" />
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  <div class="item-content-title--color">
+                    Black Angus Úc lõi vai
+                  </div>
+                </div>
+                <div class="flash-infos top-down delay-2"></div>
+                <div class="item-content-description top-down delay-4">
+                  Thịt bò Black Angus Úc tại BioFarm hay còn gọi là “Bò đen”, được ăn bổ sung thêm hạt dinh dưỡng và ngũ cốc trong số ngày quy định để đạt các mức giá trị dinh dưỡng khác nhau
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="./detail/WandaVision.html" class="custom-btn block btn-11">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Mua Ngay</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+
           <!-- SLIDE ITEM -->
           <div class="hero-slide-item">
             <img src="./images/banner/banner4.jpg" alt="" />
@@ -158,7 +164,8 @@ session_start();
                 <div class="item-action top-down delay-6">
                   <a href="./detail/star.html" class="custom-btn block btn-11">
                     <i class="bx bxs-right-arrow"></i>
-                    <span>Xem Ngay</span>
+                    <span>Mua Ngay</span>
+
                   </a>
                 </div>
               </div>

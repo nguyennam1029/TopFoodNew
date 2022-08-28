@@ -1,5 +1,6 @@
 .wrapper-insert--product {
-    background     : linear-gradient(45deg, #FC466B, #3F5EFB);
+    /* background     : linear-gradient(45deg, #FC466B, #3F5EFB); */
+    background     : url(https://devforum.info/DEMO/LoginForm1/bg.jpg) center/cover;
     height         : 100vh;
     display        : flex;
     justify-content: center;
@@ -7,6 +8,7 @@
 }
 
 .form-insert {
+    margin               : 44px 0;
     width                : 100%;
     max-width            : 414px;
     border-radius        : 10px;

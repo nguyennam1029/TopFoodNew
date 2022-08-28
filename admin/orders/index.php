@@ -151,7 +151,7 @@
                                     <th>Trạng thái</th>
                                     <th class="noExl">Chi tiết</th>
                                     <th class="noExl">Cập nhật</th>
-                                    <th class="noExl">Xóa</th>
+
                                 </tr>
                             </thead>
 
@@ -220,11 +220,7 @@
                                             <br>
 
                                         </td>
-                                        <td>
-                                            <a href="update.php?id=<?php echo $each['id'] ?>&status=2" class="custerm-btn status delete">
-                                                <ion-icon name="trash"></ion-icon>
-                                            </a>
-                                        </td>
+
 
                                     </tr>
                                 <?php endforeach ?>

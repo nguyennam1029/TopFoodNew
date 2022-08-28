@@ -9,8 +9,8 @@ if (mysqli_num_rows($result) == 1) {
     $each = mysqli_fetch_array($result);
     session_start();
 
-    $_SESSION['id'] = $each['id'];
-    $_SESSION['name'] = $each['name'];
+    $_SESSION['id_admin'] = $each['id'];
+    $_SESSION['name_admin'] = $each['name'];
     header('location:./home/index.php');
     exit;
 } else {

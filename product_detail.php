@@ -87,7 +87,7 @@ session_start();
                 <div class="row">
                     <div class="col-9 col-md-8 col-sm-12">
                         <div class="row product-info">
-                            <div class="col-4 col-sm-12">
+                            <div class="col-4 col-sm-12 ">
 
                                 <div class="movie-img">
                                     <img src="./admin/san_pham/photos/<?php echo $item_product['photo'] ?>" alt="">

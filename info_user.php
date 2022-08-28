@@ -27,8 +27,7 @@ session_start();
     <!-- <link rel="stylesheet" href="form/form_style.css"> -->
     <link rel="stylesheet" href="./grid.css" />
     <link rel="stylesheet" href="./app.css" />
-    <link rel="stylesheet" href="./detail/detail.css">
-    <link rel="stylesheet" href="./list_product/movieGenre.css" />
+
     <style>
         .info-active {
             background: linear-gradient(to right, #ff8a00, #ff2070);
@@ -140,7 +139,7 @@ session_start();
                     </a>
                     <div class="modal-main">
                         <p class="modal-main--des">
-                            TopFood xin lỗi về sự bất tiện này bạn vui lòng đăng nhập lại. " Để cập nhật thông tin - xin cảm ơn bạn "
+                            <strong>TopFood xin lỗi</strong> về sự bất tiện này bạn vui lòng đăng nhập lại. " Để cập nhật thông tin - xin cảm ơn bạn "
                         </p>
                         <a href="./sign_out.php" class="custom-btn btn-11 hover-active">Đăng xuất</a>
                     </div>
@@ -225,8 +224,11 @@ session_start();
         </a>
         <!--END BACK TO TOP -->
 
-        <script src="./list_product/product.js"></script>
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
 </body>
 
 </html>

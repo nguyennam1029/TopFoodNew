@@ -1,23 +1,28 @@
 <!-- NAV -->
+<?php $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
+
+
 <div class="nav-wrapper">
     <div class="container">
         <div class="nav">
-            <a href="#" class="logo">
+            <a href="./index.php" class="logo">
                 <img src="https://topfood.id/wp-content/uploads/2020/05/logo-topfood.png" alt="" />
             </a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="./index.php" class="nav-link active">Trang Chủ</a></li>
+                <li><a href="./index.php" class="nav-link <?= ($activePage == 'index') ? 'active' : '' ?>">Trang Chủ</a></li>
 
 
                 <li class="nav-item--type">
-                    <a href="list_product.php" class="nav-link">
-                        <span class="nav-link--type-titel">Sản Phẩm</span>
+                    <a href="list_product.php" class="nav-link <?= ($activePage == 'list_product') ? 'active' : '' ?>">
+                        <span class="nav-link--type-titel ">Sản Phẩm</span>
                     </a>
                 </li>
 
 
                 <li>
-                    <a href="./contact.php" class="nav-link">Liên Hệ</a>
+                    <a href="./contact.php" class="nav-link <?= ($activePage == 'contact') ? 'active' : '' ?>">
+                        Liên Hệ
+                    </a>
                 </li>
 
                 <?php if (empty($_SESSION['id'])) { ?>
@@ -50,14 +55,14 @@
                                     object-fit   : cover;
                                     width        : 100%;">
                                 </div>
-                                <span class="avatarlink-item--name nav-link"><?php echo $_SESSION['name'] ?></span>
+                                <span class="avatarlink-item--name nav-link <?= ($activePage == 'info_user') ? 'active' : '' ?>"><?php echo $_SESSION['name'] ?></span>
                             </div>
                         </a>
                     </li>
                     <li><a href="./sign_out.php" class="nav-link">Đăng xuất</a></li>
 
                     <li>
-                        <a href="view_cart2.php" class="nav-link nav-link--cart">
+                        <a href="view_cart2.php" class="nav-link nav-link--cart <?= ($activePage == 'view_cart2') ? 'active' : '' ?>">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span class="nav-link--cart--noti"></span>
                         </a>

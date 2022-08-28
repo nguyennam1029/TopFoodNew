@@ -269,7 +269,7 @@ body::-webkit-scrollbar {
   width                : 100%;
   padding              : 20px;
   display              : grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap             : 30px;
   margin-top           : 30px;
   margin-bottom        : 30px;
@@ -313,6 +313,46 @@ body::-webkit-scrollbar {
 .cardBox .card:hover .iconBx {
   color: var(--white);
 }
+
+/* ============================active bg - text nav left  */
+
+.active-bg {
+  background-color: var(--white) !important;
+  pointer-events  : none;
+
+}
+
+.active-text {
+  color: var(--blue) !important;
+
+}
+
+.active-text::before {
+  content         : "";
+  position        : absolute;
+  right           : 0;
+  top             : -50px;
+  width           : 50px;
+  height          : 50px;
+  background-color: transparent;
+  border-radius   : 50%;
+  box-shadow      : 35px 35px 0 10px var(--white);
+  pointer-events  : none;
+}
+
+.active-text::after {
+  content         : "";
+  position        : absolute;
+  right           : 0;
+  bottom          : -50px;
+  width           : 50px;
+  height          : 50px;
+  background-color: transparent;
+  border-radius   : 50%;
+  box-shadow      : 35px -35px 0 10px var(--white);
+  pointer-events  : none;
+}
+
 
 /* ================== Order Details List ============== */
 .details {
@@ -447,6 +487,20 @@ body::-webkit-scrollbar {
   -moz-transition   : .25s ease;
   -ms-transition    : .25s ease;
   -o-transition     : .25s ease;
+}
+
+.text {
+  background : #81ef03 !important;
+  font-size  : 20px !important;
+  font-weight: 600 !important;
+  color      : #fff !important;
+}
+
+.text-delete {
+  background : rgb(255, 0, 0) !important;
+  font-size  : 20px !important;
+  font-weight: 600 !important;
+  color      : #fff !important;
 }
 
 .status.inProgress:hover {

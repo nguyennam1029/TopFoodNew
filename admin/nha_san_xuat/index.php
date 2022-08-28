@@ -131,12 +131,12 @@
 
                                         <td>
                                             <a href="./form_update.php?id=<?php echo $each['id'] ?>">
-                                                <ion-icon name="create-outline" class="product-item--icon status delivered"></ion-icon>
+                                                <ion-icon name="create-outline" class="product-item--icon status delivered text" style=""></ion-icon>
                                             </a>
                                         </td>
                                         <td><span class="">
                                                 <a href="delete.php?id=<?php echo $each['id'] ?>">
-                                                    <ion-icon name="trash-outline" class="product-item--icon status return"></ion-icon>
+                                                    <ion-icon name="trash-outline" class="product-item--icon status return text-delete"></ion-icon>
                                                 </a>
                                             </span></td>
 

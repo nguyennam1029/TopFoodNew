@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Đăng kí</title>
+  <title>Đăng nhập</title>
   <!-- BOX ICONS -->
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="app.css" />
@@ -42,7 +42,7 @@
       </div>
     <?php } ?>
     <div class="modal-overlay" style="
-    background: url('./images/banner/banner3.jpg') top center / cover no-repeat !important;
+    background: url('./images/banner/bannerloginsigup.jpg') top center / cover no-repeat !important;
     
     "></div>
     <div class="modal-content">
